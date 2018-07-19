@@ -184,13 +184,15 @@ class Scraper
     }
 
     public function recordProductInfo($subId, $name, $url, $upc, $price){
+        $dateTime = date('Y-m-d H:i:s');
         $pdo = $this->getPdo();
         $sql = 'INSERT INTO `products`
                SET `sub_category_id` = '.$subId.',  
                `product_name` = "'.$name.'",
                `product_url` = "'.$url.'", 
                `product_upc` = "'.$upc.'",
-               `product_price` = "'.$price.'"
+               `product_price` = "'.$price.'",
+               `date_executed` = "'.$dateTime.'"
                ';
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
