@@ -13,7 +13,7 @@ define('DB_DSN','mysql:host=' . DB_HOST . ';dbname=' . DB_NAME);
 define('EBAY_URL_PARAM', '?LH_ItemCondition=1000&LH_Sold=1&listingOnly=1&rt=nc&_dmd=1&_pgn=1&_sop=13');
 
 define('ROOT_DIR', '');
-define('NO_REPLY_EMAIL', 'noreply@aws.com');
+define('NO_REPLY_EMAIL', 'noreply@149.28.204.93.com');
 define('ADMIN_EMAIL', 'jeraldfeller@gmail.com');
 
 define('MARKET_LIMIT_COUNT', 20); // rows of data fetched per execution
