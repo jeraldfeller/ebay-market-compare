@@ -32,7 +32,7 @@ while (($data = fgetcsv($fileHandle, 10000, ",")) !== FALSE) {
             $percentage = $percentage * 100;
             if ($percentage >= 15) {
                 echo $percentage;
-                $scraper->sendMail(false, $prodId, $price, $directLink, true, $data);
+                $scraper->sendMail(false, $prodId, $price, '', true, $data);
             }
         }
 

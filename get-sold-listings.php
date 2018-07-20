@@ -4,7 +4,7 @@ require 'Model/Scraper.php';
 require 'simple_html_dom.php';
 $scraper = new Scraper();
 $listings = $scraper->getListings();
-$dateNow = date('Y-m-d');
+$dateNow = date('Y-m-d', strtotime('-1 days'));
 echo $dateNow;
 $endDateCount = 0;
 foreach($listings as $row){
@@ -13,10 +13,12 @@ foreach($listings as $row){
     $hasListing = true;
     while($hasListing == true){
         // remove this on production
+        /*
         if($pgn == 10){
             $hasListing = false;
             break;
         }
+        */
         if($endDateCount == 5){
             $hasListing = false;
         }

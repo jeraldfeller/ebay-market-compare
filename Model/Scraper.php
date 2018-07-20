@@ -288,7 +288,7 @@ class Scraper
         $ebayProductName = $ebayItem['product_name'];
         $message ='';
         if($isCsv){
-            $message .= "<table>
+            $message .= "<table border='1'>
                           <tr>
                             <td>Upc</td>
                             <td>Price</td>
@@ -308,7 +308,7 @@ class Scraper
                         </table>";
         }else{
             $marketData = $this->getMarketById($marketId);
-            $message .= "<table>
+            $message .= "<table border='1'>
                           <tr>
                             <td>Upc</td>
                             <td>Ebay Price</td>
