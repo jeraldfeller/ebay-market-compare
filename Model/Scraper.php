@@ -279,6 +279,11 @@ class Scraper
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
 
+        $sql = 'UPDATE `products` SET `has_match` = 1 WHERE `id` = '.$prodId;
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+
+
         $percentage = $ebayPrice - $price;
         $percentage = $percentage / $ebayPrice;
         $percentage = $percentage * 100;
