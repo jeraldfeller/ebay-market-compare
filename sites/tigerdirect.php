@@ -1,7 +1,7 @@
 <?php
-require '../Model/Init.php';
-require '../Model/Scraper.php';
-require '../simple_html_dom.php';
+require '/var/www/html/ebay-market-compare/Model/Init.php';
+require '/var/www/html/ebay-market-compare/Model/Scraper.php';
+require '/var/www/html/ebay-market-compare/simple_html_dom.php';
 $searchUrl = 'http://www.tigerdirect.com/applications/SearchTools/search.asp?keywords=';
 $scraper = new Scraper();
 $marketData = $scraper->getMarketData('tigerdirect');

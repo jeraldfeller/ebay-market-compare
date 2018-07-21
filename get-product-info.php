@@ -7,7 +7,6 @@ $productLinks = $scraper->getProductSoldLinks();
 foreach($productLinks as $row){
     $url = $row['url'];
     $id = $row['id'];
-    echo $url .'<br>';
     $htmlData = $scraper->curlTo($url, null);
     if($htmlData['html']){
         $html = str_get_html($htmlData['html']);
@@ -36,9 +35,6 @@ foreach($productLinks as $row){
                                     $upc = strtolower(trim($h2[$x]->plaintext));
                                     if(!preg_match("/[a-z]/i", $upc)){
                                         $scraper->recordProductInfo($id, $productName, $url, $upc, $price);
-                                        echo $upc . '<br>';
-                                        echo $price . '<br>';
-                                        echo '<hr>';
                                     }
                                 }
                             }

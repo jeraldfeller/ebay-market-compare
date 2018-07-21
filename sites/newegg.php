@@ -1,7 +1,7 @@
 <?php
-require '../Model/Init.php';
-require '../Model/Scraper.php';
-require '../simple_html_dom.php';
+require '/var/www/html/ebay-market-compare/Model/Init.php';
+require '/var/www/html/ebay-market-compare/Model/Scraper.php';
+require '/var/www/html/ebay-market-compare/simple_html_dom.php';
 $searchUrl = 'https://www.newegg.com/Product/ProductList.aspx?Submit=ENE&DEPA=0&Order=BESTMATCH&N=-1&isNodeId=1&Description=';
 $scraper = new Scraper();
 $marketData = $scraper->getMarketData('newegg');

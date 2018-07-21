@@ -2,9 +2,9 @@
 /**
  * Note: the method to scrape products is thru target api
  */
-require '../Model/Init.php';
-require '../Model/Scraper.php';
-require '../simple_html_dom.php';
+require '/var/www/html/ebay-market-compare/Model/Init.php';
+require '/var/www/html/ebay-market-compare/Model/Scraper.php';
+require '/var/www/html/ebay-market-compare/simple_html_dom.php';
 $searchUrl = 'https://redsky.target.com/v1/plp/search/?count=1&offset=0&keyword=';
 $scraper = new Scraper();
 $marketData = $scraper->getMarketData('target');

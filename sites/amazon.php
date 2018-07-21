@@ -1,7 +1,7 @@
 <?php
-require '../Model/Init.php';
-require '../Model/Scraper.php';
-require '../simple_html_dom.php';
+require '/var/www/html/ebay-market-compare/Model/Init.php';
+require '/var/www/html/ebay-market-compare/Model/Scraper.php';
+require '/var/www/html/ebay-market-compare/simple_html_dom.php';
 $searchUrl = 'https://www.amazon.com/s/ref=nb_sb_noss?field-keywords=';
 $scraper = new Scraper();
 $marketData = $scraper->getMarketData('amazon');

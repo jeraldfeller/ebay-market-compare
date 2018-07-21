@@ -7,6 +7,35 @@ class Scraper
     public $debug = TRUE;
     protected $db_pdo;
 
+    public function curlToGoogle($url){
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "GET",
+            CURLOPT_HTTPHEADER => array(
+                "Cache-Control: no-cache",
+                "Postman-Token: 85969a77-227f-4da2-ab22-81feaa26c0c4"
+            ),
+        ));
+
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+
+        curl_close($curl);
+
+        if ($err) {
+            return array('html' => $err);
+        } else {
+            return array('html' => $response);
+        }
+    }
+
 
     public function curlToAmazon($url){
 
@@ -336,7 +365,51 @@ class Scraper
         $email->Subject   = 'Ebay Product Price Alert';
         $email->Body      = $message;
         $email->IsHTML(true);
+        $email->AddAddress( 'jeraldfeller@gmail.com' );
         $email->AddAddress( ADMIN_EMAIL );
+
+        $return = $email->Send();
+        return $return;
+    }
+
+
+    public function sendMailGoogle($prodId, $price, $directLink, $store){
+        $ebayItem = $this->getProductById($prodId);
+        $ebayPrice = $ebayItem['product_price'];
+        $ebayUrl = $ebayItem['product_url'];
+        $ebayUpc = $ebayItem['product_upc'];
+        $ebayProductName = $ebayItem['product_name'];
+        $message ='';
+        $message .= "<table border='1'>
+                          <tr>
+                            <td>Upc</td>
+                            <td>Price</td>
+                            <td>Product Title</td>
+                            <td>Store</td>
+                            <td>Product Link</td>
+                            <td>Ebay Price</td>
+                            <td>Ebay Product Link</td>
+                          </tr>
+                          <tr>
+                            <td>$ebayUpc</td>
+                            <td>$price</td>
+                            <td>$ebayProductName</td>
+                            <td>$store</td>
+                            <td>$directLink</td>
+                            <td>$ebayPrice</td>
+                            <td><a href='$ebayUrl'>$ebayUrl</a></td>
+                          </tr>
+                        </table>";
+        $email = new PHPMailer();
+        //$email->isSMTP(false);
+        $email->From      = NO_REPLY_EMAIL;
+        $email->FromName      = NO_REPLY_EMAIL;
+        $email->Subject   = 'Ebay Product Price Alert';
+        $email->Body      = $message;
+        $email->IsHTML(true);
+        $email->AddAddress( 'jeraldfeller@gmail.com' );
+        $email->AddAddress( ADMIN_EMAIL );
+
         $return = $email->Send();
         return $return;
     }

@@ -47,9 +47,6 @@ foreach($listings as $row){
                         echo $endDate . '<br>';
                         if($endDate >= $dateNow){
                             if($endDate == $dateNow){
-                                echo '-Name :'.$prod.'<br>';
-                                echo '-Link :'.$prodLink.'<br>';
-                                echo '-Ended Date :'.$endDate.'<br>';
                                 $scraper->insertProductListingLinks($id, $prodLink, 0, $endDate);
                             }
                         }else{
