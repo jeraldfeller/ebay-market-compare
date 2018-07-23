@@ -119,6 +119,7 @@ class Scraper
                SET `category` = "'.$category.'", `url` = "'.$link.'"';
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
+        $pdo = null;
     }
 
     public function addSubCategories($id, $category, $link, $hasListings){
@@ -138,6 +139,7 @@ class Scraper
             $stmt->execute();
         }
 
+        $pdo = null;
     }
 
     public function addThirdLevelCategories($id, $category, $link){
@@ -151,7 +153,7 @@ class Scraper
             $stmt = $pdo->prepare($sql);
             $stmt->execute();
         }
-
+        $pdo = null;
     }
     public function getCategories(){
         $pdo = $this->getPdo();
@@ -165,13 +167,14 @@ class Scraper
             $content[] = $row;
         }
 
+        $pdo = null;
         return $content;
     }
 
     public function getListings(){
         $pdo = $this->getPdo();
         $sql = 'SELECT *
-                  FROM `sub_categories` WHERE `status` = 0 LIMIT 1
+                  FROM `sub_categories` WHERE `status` = 0 LIMIT 2
                   ';
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
@@ -182,6 +185,7 @@ class Scraper
             $stmtUpdate = $pdo->prepare($sqlUpdate);
             $stmtUpdate->execute();
         }
+        $pdo = null;
         return $content;
     }
 
@@ -191,14 +195,14 @@ class Scraper
                SET `sub_category_id` = '.$id.',  `url` = "'.$url.'", `status` = "'.$status.'", `date_sold` = "'.$endDate.'"';
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
-
+        $pdo = null;
         return true;
     }
 
     public function getProductSoldLinks(){
         $pdo = $this->getPdo();
         $sql = 'SELECT DISTINCT url, id
-                  FROM `product_sold_links` WHERE `status` = 0 LIMIT 50
+                  FROM `product_sold_links` WHERE `status` = 0 LIMIT 200
                   ';
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
@@ -209,6 +213,7 @@ class Scraper
             $stmtUpdate = $pdo->prepare($sqlUpdate);
             $stmtUpdate->execute();
         }
+        $pdo = null;
         return $content;
     }
 
@@ -225,7 +230,7 @@ class Scraper
                ';
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
-
+        $pdo = null;
         return true;
     }
 
@@ -241,6 +246,7 @@ class Scraper
         if(!$row = $stmt->fetch(PDO::FETCH_ASSOC)){
             $content[] = $row;
         }
+        $pdo = null;
         return $content;
     }
 
@@ -250,6 +256,7 @@ class Scraper
                   ';
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
+        $pdo = null;
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
@@ -263,6 +270,7 @@ class Scraper
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
             $content[] = $row;
         }
+        $pdo = null;
         return $content;
     }
 
@@ -291,6 +299,7 @@ class Scraper
             // send mail notification
             $this->sendMail($id, $prodId, $price, $directLink);
         }
+        $pdo = null;
         return true;
     }
 
@@ -301,7 +310,9 @@ class Scraper
                   ';
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+        $return = $stmt->fetch(PDO::FETCH_ASSOC);
+        $pdo = null;
+        return $return;
     }
 
     public function getMarketById($id){
@@ -311,7 +322,9 @@ class Scraper
                   ';
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+        $return = $stmt->fetch(PDO::FETCH_ASSOC);
+        $pdo = null;
+        return $return;
     }
 
     public function sendMail($marketId = false, $prodId, $price, $directLink, $isCsv = false, $csvData = array()){
@@ -424,6 +437,7 @@ class Scraper
         $sql = 'UPDATE `market_sites` SET `offset` = (`offset` + '.$limit.') WHERE `id` = '.$id;
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
+        $pdo = null;
     }
 
     public function getPdo()
