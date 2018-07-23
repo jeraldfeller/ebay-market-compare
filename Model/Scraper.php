@@ -8,9 +8,20 @@ class Scraper
     protected $db_pdo;
 
     public function curlToGoogle($url){
+        $port = 47647;
+        $proxy = array(
+            '173.208.9.179',
+            '167.160.106.67',
+            '108.62.246.94',
+            '8.29.122.241',
+            '196.19.251.19',
+            '213.184.115',
+        );
+        $ip = '"'.$proxy[mt_rand(0,count($proxy) - 1)].'"';
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
+            CURLOPT_PROXY => $proxy[mt_rand(0,count($proxy) - 1)],
             CURLOPT_URL => $url,
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
@@ -18,6 +29,10 @@ class Scraper
             CURLOPT_TIMEOUT => 30,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "GET",
+            CURLOPT_PROXYTYPE => CURLPROXY_HTTP,
+            CURLOPT_PROXY => $ip,
+            CURLOPT_PROXYPORT => $port,
+            CURLOPT_PROXYUSERPWD => 'ebymarket:dfab7c358',
             CURLOPT_HTTPHEADER => array(
                 "Cache-Control: no-cache",
                 "Postman-Token: 85969a77-227f-4da2-ab22-81feaa26c0c4"
@@ -39,7 +54,16 @@ class Scraper
 
     public function curlToAmazon($url){
 
-        $proxy = null;
+        $port = 47647;
+        $proxy = array(
+            '173.208.9.179',
+            '167.160.106.67',
+            '108.62.246.94',
+            '8.29.122.241',
+            '196.19.251.19',
+            '213.184.115',
+        );
+        $ip = '"'.$proxy[mt_rand(0,count($proxy) - 1)].'"';
 
         if($proxy != null){
             $option = array(
@@ -51,6 +75,10 @@ class Scraper
                 CURLOPT_TIMEOUT => 30,
                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                 CURLOPT_CUSTOMREQUEST => "GET",
+                CURLOPT_PROXYTYPE => CURLPROXY_HTTP,
+                CURLOPT_PROXY => $ip,
+                CURLOPT_PROXYPORT => $port,
+                CURLOPT_PROXYUSERPWD => 'ebymarket:dfab7c358',
                 CURLOPT_HTTPHEADER => array(
                     "Cache-Control: no-cache",
                     "Postman-Token: ab7aa588-080d-49a1-bae4-03ed5b7517c4"
@@ -88,14 +116,26 @@ class Scraper
     }
     public function curlTo($url, $proxy){
 
+        $port = 47647;
+        $proxy = array(
+            '173.208.9.179',
+            '167.160.106.67',
+            '108.62.246.94',
+            '8.29.122.241',
+            '196.19.251.19',
+            '213.184.115',
+        );
+
+        $ip = '"'.$proxy[mt_rand(0,count($proxy) - 1)].'"';
         $curl = curl_init();
-        curl_setopt($curl, CURLOPT_URL, $url);
-        if ($proxy != NULL) {
-            curl_setopt($curl, CURLOPT_PROXY, $proxy[mt_rand(0,count($proxy) - 1)]);
-        }
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
-        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
-        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE);
+        curl_setopt($curl, CURLOPT_TIMEOUT, 20);
+        curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($curl, CURLOPT_PROXYTYPE, CURLPROXY_HTTP);
+        curl_setopt($curl, CURLOPT_PROXY, $ip);
+        curl_setopt($curl, CURLOPT_PROXYPORT, $port);
+        curl_setopt($curl, CURLOPT_PROXYUSERPWD, 'ebymarket:dfab7c358');
+        curl_setopt($curl, CURLOPT_URL, '"'.$url.'"');
         $contents = curl_exec($curl);
         curl_close($curl);
         return array('html' => $contents);
@@ -438,6 +478,23 @@ class Scraper
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
         $pdo = null;
+    }
+
+    public function getNoMatchProducts(){
+        $pdo = $this->getPdo();
+        $sql = 'SELECT *
+                  FROM `products` WHERE `has_match` = 0
+                  ';
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+        $contents = array();
+        while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+            $contents[] = $row;
+        }
+        $return = $contents;
+        $pdo = null;
+
+        return $return;
     }
 
     public function getPdo()
