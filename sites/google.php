@@ -33,8 +33,8 @@ foreach ($upcList as $row){
                     $percentage = $ebayPrice - $price;
                     $percentage = $percentage / $ebayPrice;
                     $percentage = $percentage * 100;
-                    if ($percentage >= 15) {
-                        $scraper->sendMailGoogle($prodId, $price, $directLink, $store);
+                    if ($percentage >= PERCENTAGE_TARGET) {
+                        $scraper->recordToCsvGoogle($prodId, $price, $directLink, $store);
                     }
                     echo $prodName.'<br>';
                     echo $link.'<br>';

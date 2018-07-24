@@ -105,20 +105,37 @@ class Scraper
             '196.19.251.19',
             '213.184.115.210',
         );
-
         $ip = $proxy[mt_rand(0,count($proxy) - 1)];
         $curl = curl_init();
-        curl_setopt($curl, CURLOPT_TIMEOUT, 20);
-        curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($curl, CURLOPT_PROXYTYPE, CURLPROXY_HTTP);
-        curl_setopt($curl, CURLOPT_PROXY, $ip);
-        curl_setopt($curl, CURLOPT_PROXYPORT, '47647');
-        curl_setopt($curl, CURLOPT_PROXYUSERPWD, 'ebymarket:dfab7c358');
-        curl_setopt($curl, CURLOPT_URL, '"'.$url.'"');
-        $contents = curl_exec($curl);
+
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "GET",
+            CURLOPT_PROXYTYPE => CURLPROXY_HTTP,
+            CURLOPT_PROXY => $ip,
+            CURLOPT_PROXYPORT => '47647',
+            CURLOPT_PROXYUSERPWD => 'ebymarket:dfab7c358',
+            CURLOPT_HTTPHEADER => array(
+                "Cache-Control: no-cache",
+                "Postman-Token: 85969a77-227f-4da2-ab22-81feaa26c0c4"
+            ),
+        ));
+
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+
         curl_close($curl);
-        return array('html' => $contents);
+
+        if ($err) {
+            return array('html' => $err);
+        } else {
+            return array('html' => $response);
+        }
     }
 
     public function delete_all_between($beginning, $end, $string) {
@@ -295,8 +312,15 @@ class Scraper
     }
 
     public function recordProductMarketMatch($id, $prodId, $upc, $price, $ebayPrice, $directLink){
-        $pdo = $this->getPdo();
-        $sql = 'INSERT INTO `market_product_match`
+
+        $percentage = $ebayPrice - $price;
+        $percentage = $percentage / $ebayPrice;
+        $percentage = $percentage * 100;
+        if($percentage >= PERCENTAGE_TARGET){
+            // send mail notification
+            //$this->sendMail($id, $prodId, $price, $directLink);
+            $pdo = $this->getPdo();
+            $sql = 'INSERT INTO `market_product_match`
                SET `market_site_id` = '.$id.',
                `product_id` = '.$prodId.',
                `upc` = "'.$upc.'",
@@ -304,20 +328,16 @@ class Scraper
                `ebay_price` = '.$ebayPrice.',
                `market_url` = "'.$directLink.'"
                ';
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute();
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute();
 
-        $sql = 'UPDATE `products` SET `has_match` = 1 WHERE `id` = '.$prodId;
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute();
+            $sql = 'UPDATE `products` SET `has_match` = 1 WHERE `id` = '.$prodId;
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute();
 
 
-        $percentage = $ebayPrice - $price;
-        $percentage = $percentage / $ebayPrice;
-        $percentage = $percentage * 100;
-        if($percentage >= 15){
-            // send mail notification
-            $this->sendMail($id, $prodId, $price, $directLink);
+            $this->recordToCsv($id, $prodId, $price, $directLink);
+
         }
         $pdo = null;
         return true;
@@ -345,6 +365,72 @@ class Scraper
         $return = $stmt->fetch(PDO::FETCH_ASSOC);
         $pdo = null;
         return $return;
+    }
+    public function recordToCsv($marketId, $prodId, $price, $directLink, $isCsv = false, $csvData = array()){
+        $ebayItem = $this->getProductById($prodId);
+        $ebayPrice = $ebayItem['product_price'];
+        $ebayUrl = $ebayItem['product_url'];
+        $ebayUpc = $ebayItem['product_upc'];
+        $ebayProductName = $ebayItem['product_name'];
+        $message ='';
+        if($isCsv){
+            $csv = 'google_sheets.csv';
+            $data[] = implode('","', array(
+                    $csvData[0],
+                    $csvData[1],
+                    $csvData[2],
+                    $ebayPrice,
+                    $ebayUrl
+                )
+            );
+        }else{
+            $csv = 'product_list.csv';
+            $marketData = $this->getMarketById($marketId);
+            $data[] = implode('","', array(
+                    $ebayUpc,
+                    $ebayPrice,
+                    $ebayProductName,
+                    $ebayUrl,
+                    $marketData['name'],
+                    $price,
+                    $directLink
+                )
+            );
+        }
+
+        $file = fopen($csv,"a");
+        foreach ($data as $line){
+            fputcsv($file, explode('","',$line));
+        }
+        fclose($file);
+
+        return true;
+    }
+
+
+    public function recordCsvToGoogle($prodId, $price, $directLink, $store){
+        $ebayItem = $this->getProductById($prodId);
+        $ebayPrice = $ebayItem['product_price'];
+        $ebayUrl = $ebayItem['product_url'];
+        $ebayUpc = $ebayItem['product_upc'];
+        $ebayProductName = $ebayItem['product_name'];
+        $csv = 'google_shopping.csv';
+        $data[] = implode('","', array(
+                $ebayUpc,
+                $price,
+                $ebayProductName,
+                $store,
+                $directLink,
+                $ebayPrice,
+                $ebayUrl
+            )
+        );
+        $file = fopen($csv,"a");
+        foreach ($data as $line){
+            fputcsv($file, explode('","',$line));
+        }
+        fclose($file);
+        return true;
     }
 
     public function sendMail($marketId = false, $prodId, $price, $directLink, $isCsv = false, $csvData = array()){
@@ -450,6 +536,21 @@ class Scraper
 
         $return = $email->Send();
         return $return;
+    }
+
+    public function sendOutPut(){
+        $email = new PHPMailer();
+        $email->From      = NO_REPLY_EMAIL;
+        $email->FromName      = NO_REPLY_EMAIL;
+        $email->Subject   = 'Ebay Product Reports';
+        $email->AddAttachment( CSV_ROOT.'product_list.csv' , 'product_list' );
+        $email->AddAttachment( CSV_ROOT.'google_sheets.csv' , 'google_sheets' );
+        $email->AddAttachment( CSV_ROOT.'google_shopping.csv' , 'google_shopping' );
+        $email->IsHTML(true);
+        $email->AddAddress( 'jeraldfeller@gmail.com' );
+     //   $email->AddAddress( ADMIN_EMAIL );
+
+        $return = $email->Send();
     }
 
     public function updateMarketOffset($id, $limit){

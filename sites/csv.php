@@ -26,13 +26,13 @@ while (($data = fgetcsv($fileHandle, 10000, ",")) !== FALSE) {
         $ebayUpc = $row['product_upc'];
         $prodId = $row['id'];
         $ebayPrice = $row['product_price'];
+        $directLink = $row['product_url'];
         if($ebayUpc == $upc) {
             $percentage = $ebayPrice - $price;
             $percentage = $percentage / $ebayPrice;
             $percentage = $percentage * 100;
-            if ($percentage >= 15) {
-                echo $percentage;
-                $scraper->sendMail(false, $prodId, $price, '', true, $data);
+            if ($percentage >= PERCENTAGE_TARGET) {
+                $scraper->recordToCsv(false, $prodId, $price, '', true, $data);
             }
         }
 
