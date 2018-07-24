@@ -239,7 +239,7 @@ class Scraper
     public function getProductSoldLinks(){
         $pdo = $this->getPdo();
         $sql = 'SELECT DISTINCT url, id
-                  FROM `product_sold_links` WHERE `status` = 0 LIMIT 200
+                  FROM `product_sold_links` WHERE `status` = 0 LIMIT 50
                   ';
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
@@ -558,6 +558,23 @@ class Scraper
         $sql = 'UPDATE `market_sites` SET `offset` = (`offset` + '.$limit.') WHERE `id` = '.$id;
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
+        $pdo = null;
+    }
+
+    public function reset(){
+        $pdo = $this->getPdo();
+        $sql = array(
+            'UPDATE `market_sites` SET `offset` = 0',
+            'DELETE FROM `market_product_match`',
+            'DELETE FROM `products`',
+            'DELETE FROM `product_sold_links`'
+        );
+
+        for($x = 0; $x < count($sql); $x++){
+            $stmt = $pdo->prepare($sql[$x]);
+            $stmt->execute();
+        }
+
         $pdo = null;
     }
 
