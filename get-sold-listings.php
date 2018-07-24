@@ -5,7 +5,7 @@ require 'simple_html_dom.php';
 $scraper = new Scraper();
 $listings = $scraper->getListings();
 $dateNow = date('Y-m-d', strtotime('-1 days'));
-echo $dateNow;
+echo $dateNow . '<br>';
 $endDateCount = 0;
 foreach($listings as $row){
     $pgn = 1;
@@ -27,7 +27,7 @@ foreach($listings as $row){
         echo $category .'<br>';
         echo $url .'<br>';
 
-        $htmlData = $scraper->curlTo($url, null);
+        $htmlData = $scraper->curlToEbay($url, null);
         if($htmlData['html']){
             echo '*<br>';
             $html = str_get_html($htmlData['html']);

@@ -94,6 +94,20 @@ class Scraper
             return array('html' => $response);
         }
     }
+    public function curlToEbay($url, $proxy){
+        $proxy = null;
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, $url);
+        if ($proxy != NULL) {
+            curl_setopt($curl, CURLOPT_PROXY, $proxy[mt_rand(0,count($proxy) - 1)]);
+        }
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE);
+        $contents = curl_exec($curl);
+        curl_close($curl);
+        return array('html' => $contents);
+    }
     public function curlTo($url, $proxy){
 
         $port = '47647';
@@ -543,6 +557,7 @@ class Scraper
         $email->From      = NO_REPLY_EMAIL;
         $email->FromName      = NO_REPLY_EMAIL;
         $email->Subject   = 'Ebay Product Reports';
+        $email->Body      = 'Please see file attached';
         $email->AddAttachment( CSV_ROOT.'product_list.csv' , 'product_list' );
         $email->AddAttachment( CSV_ROOT.'google_sheets.csv' , 'google_sheets' );
         $email->AddAttachment( CSV_ROOT.'google_shopping.csv' , 'google_shopping' );
@@ -551,6 +566,8 @@ class Scraper
      //   $email->AddAddress( ADMIN_EMAIL );
 
         $return = $email->Send();
+
+        return $return;
     }
 
     public function updateMarketOffset($id, $limit){

@@ -13,7 +13,7 @@ define('DB_DSN','mysql:host=' . DB_HOST . ';dbname=' . DB_NAME);
 define('EBAY_URL_PARAM', '?LH_ItemCondition=1000&LH_Sold=1&listingOnly=1&rt=nc&_dmd=1&_pgn=1&_sop=13');
 
 define('ROOT_DIR', '');
-define('NO_REPLY_EMAIL', 'noreply@ec2-18-188-3-174.us-east-2.compute.amazonaws.com');
+define('NO_REPLY_EMAIL', 'noreply@ec2-18-191-240-192.us-east-2.compute.amazonaws.com');
 define('ADMIN_EMAIL', 'JamilyFam5@gmail.com');
 
 define('MARKET_LIMIT_COUNT', 50); // rows of data fetched per execution

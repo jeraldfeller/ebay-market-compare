@@ -7,7 +7,7 @@ $productLinks = $scraper->getProductSoldLinks();
 foreach($productLinks as $row){
     $url = $row['url'];
     $id = $row['id'];
-    $htmlData = $scraper->curlTo($url, null);
+    $htmlData = $scraper->curlToEbay($url, null);
     if($htmlData['html']){
         $html = str_get_html($htmlData['html']);
         $productName = $html->find('#itemTitle', 0);
@@ -33,6 +33,7 @@ foreach($productLinks as $row){
                             if($itemProp){
                                 if($itemProp == 'gtin13'){
                                     $upc = strtolower(trim($h2[$x]->plaintext));
+                                    echo $upc . '<br>';
                                     if(!preg_match("/[a-z]/i", $upc)){
                                         $scraper->recordProductInfo($id, $productName, $url, $upc, $price);
                                     }
