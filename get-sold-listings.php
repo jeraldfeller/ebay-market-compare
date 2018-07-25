@@ -11,14 +11,16 @@ foreach($listings as $row){
     $pgn = 1;
     $category = $row['category'];
     $hasListing = true;
+
     while($hasListing == true){
         // remove this on production
         /*
-        if($pgn == 10){
+        if($pgn == 20){
             $hasListing = false;
             break;
         }
         */
+
         if($endDateCount == 5){
             $hasListing = false;
         }
@@ -33,6 +35,7 @@ foreach($listings as $row){
             $html = str_get_html($htmlData['html']);
             $listings = $html->find('.s-item');
             if(count($listings) > 0){
+                $insertData = array();
                 for($x = 0; $x < count($listings); $x++){
                     $itemLink = $listings[$x]->find('.s-item__link', 0);
                     if($itemLink){
@@ -44,10 +47,12 @@ foreach($listings as $row){
                         }else{
                             $endDate = 0;
                         }
-                        echo $endDate . '<br>';
+
                         if($endDate >= $dateNow){
                             if($endDate == $dateNow){
-                                $scraper->insertProductListingLinks($id, $prodLink, 0, $endDate);
+                                echo $endDate . '<br>';
+                                $insertData[] = array($id, $prodLink, 0, $endDate);
+                                //$scraper->insertProductListingLinks($id, $prodLink, 0, $endDate);
                             }
                         }else{
                             $endDateCount++;
@@ -55,8 +60,16 @@ foreach($listings as $row){
 
                     }
                 }
+
+                // insert bulk
+                if(count($insertData) > 0){
+                    $scraper->insertProductListingLinksBulk($insertData);
+                }
             }
         }
         $pgn++;
+
     }
+
+
 }

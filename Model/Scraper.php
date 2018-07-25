@@ -250,10 +250,30 @@ class Scraper
         return true;
     }
 
+    public function insertProductListingLinksBulk($data){
+        $pdo = $this->getPdo();
+        $values = '';
+        for($x = 0; $x < count($data); $x++){
+            if($x == count($data) -1 ){
+                $values .= '('.$data[$x][0].',"'.$data[$x][1].'",'.$data[$x][2].',"'.$data[$x][3].'")';
+            }else{
+                $values .= '('.$data[$x][0].',"'.$data[$x][1].'",'.$data[$x][2].',"'.$data[$x][3].'"),';
+            }
+        }
+        $sql = 'INSERT INTO `product_sold_links`
+                  (`sub_category_id`, `url`, `status`, `date_sold`)
+                VALUES '.$values.'
+               ';
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+        $pdo = null;
+        return true;
+    }
+
     public function getProductSoldLinks(){
         $pdo = $this->getPdo();
         $sql = 'SELECT DISTINCT url, id
-                  FROM `product_sold_links` WHERE `status` = 0 LIMIT 50
+                  FROM `product_sold_links` WHERE `status` = 0 LIMIT 100
                   ';
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
@@ -387,8 +407,8 @@ class Scraper
         $ebayUpc = $ebayItem['product_upc'];
         $ebayProductName = $ebayItem['product_name'];
         $message ='';
-        if($isCsv){
-            $csv = 'google_sheets.csv';
+        if(count($isCsv) > 0){
+            $csv = CSV_ROOT.'google_sheets.csv';
             $data[] = implode('","', array(
                     $csvData[0],
                     $csvData[1],
@@ -398,12 +418,12 @@ class Scraper
                 )
             );
         }else{
-            $csv = 'product_list.csv';
+            $csv = CSV_ROOT.'product_list.csv';
             $marketData = $this->getMarketById($marketId);
             $data[] = implode('","', array(
                     $ebayUpc,
                     $ebayPrice,
-                    $ebayProductName,
+                    html_entity_decode($ebayProductName),
                     $ebayUrl,
                     $marketData['name'],
                     $price,
@@ -422,17 +442,17 @@ class Scraper
     }
 
 
-    public function recordCsvToGoogle($prodId, $price, $directLink, $store){
+    public function recordToCsvGoogle($prodId, $price, $directLink, $store){
         $ebayItem = $this->getProductById($prodId);
         $ebayPrice = $ebayItem['product_price'];
         $ebayUrl = $ebayItem['product_url'];
         $ebayUpc = $ebayItem['product_upc'];
         $ebayProductName = $ebayItem['product_name'];
-        $csv = 'google_shopping.csv';
+        $csv = CSV_ROOT.'google_shopping.csv';
         $data[] = implode('","', array(
                 $ebayUpc,
                 $price,
-                $ebayProductName,
+                html_entity_decode($ebayProductName),
                 $store,
                 $directLink,
                 $ebayPrice,
@@ -561,11 +581,19 @@ class Scraper
         $email->AddAttachment( CSV_ROOT.'product_list.csv' , 'product_list' );
         $email->AddAttachment( CSV_ROOT.'google_sheets.csv' , 'google_sheets' );
         $email->AddAttachment( CSV_ROOT.'google_shopping.csv' , 'google_shopping' );
+        $email->AddAttachment( CSV_ROOT.'no_match_product_list.csv' , 'no_match_product_list' );
         $email->IsHTML(true);
         $email->AddAddress( 'jeraldfeller@gmail.com' );
-     //   $email->AddAddress( ADMIN_EMAIL );
+       // $email->AddAddress( ADMIN_EMAIL );
 
         $return = $email->Send();
+        if($return){
+            $pdo = $this->getPdo();
+            $sql = 'UPDATE `process_status` SET `is_sent` = 1 WHERE `id` = 0';
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute();
+            $pdo = null;
+        }
 
         return $return;
     }
@@ -592,6 +620,30 @@ class Scraper
             $stmt->execute();
         }
 
+        $sql = 'UPDATE `process_status` SET `check_count` = 0, `is_sent` = 0';
+        $stmt = $pdo->prepare($sql[$x]);
+        $stmt->execute();
+
+        $csv = CSV_ROOT.'/product_list.csv';
+        $file = fopen($csv,"w");
+        fputcsv($file, 'Upc,Ebay Price,Product Name,Ebay Product Link, Store,Store Price, Store Product Link');
+        fclose($file);
+
+        $csv = CSV_ROOT.'/google_sheets.csv';
+        $file = fopen($csv,"w");
+        fputcsv($file, 'Upc,Price,Product Title,Store,Ebay Price, Ebay Product Link');
+        fclose($file);
+
+        $csv = CSV_ROOT.'/google_shopping.csv';
+        $file = fopen($csv,"w");
+        fputcsv($file, 'Upc,Price,Product Title,Store,Product Link,Ebay Price,Ebay Product Link');
+        fclose($file);
+
+        $csv = CSV_ROOT.'/no_match_product_list.csv';
+        $file = fopen($csv,"w");
+        fputcsv($file, 'Upc,Ebay Price,Product Name,Ebay Product Link');
+        fclose($file);
+
         $pdo = null;
     }
 
@@ -610,6 +662,65 @@ class Scraper
         $pdo = null;
 
         return $return;
+    }
+
+    public function isReadyToSendOutput(){
+        $pdo = $this->getPdo();
+        $sql = 'SELECT count(id) AS rowCount FROM `products`';
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+        $prodCount = $stmt->fetch(PDO::FETCH_ASSOC)['rowCount'];
+
+        $sql = 'SELECT `offset` FROM `market_sites`';
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+
+        $pass = true;
+        while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+            $offset = $row['offset'];
+            if($offset != $prodCount){
+                $pass = false;
+                break;
+            }
+        }
+
+        if($pass == true){
+            $sql = 'UPDATE `process_status` SET `check_count` = (`check_count` + 1) WHERE `id` = 0';
+        }else{
+            $sql = 'UPDATE `process_status` SET `check_count` = 0 WHERE `id` = 0';
+        }
+
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+
+        // check if it pass 2 checks then return true to send the files
+
+        $sql = 'SELECT * FROM `process_status` WHERE `id` = 0';
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+        $p = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if($p['check_count'] == 2){
+            $return = true;
+        }else{
+            $return = false;
+        }
+
+        $pdo = null;
+
+        return $return;
+    }
+
+    public function sitesExecutionReady(){
+        $pdo = $this->getPdo();
+        $sql = 'SELECT count(id) as rowCount
+                  FROM `sub_categories` WHERE `status` = 0
+                  ';
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+        $return = $stmt->fetch(PDO::FETCH_ASSOC);
+        $pdo = null;
+        return $return['rowCount'];
     }
 
     public function getPdo()
