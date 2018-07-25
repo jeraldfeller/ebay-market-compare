@@ -18,6 +18,8 @@ foreach($productLinks as $row){
                 $price = $html->find('#mm-saleDscPrc', 0);
                 if(!$price){
                     $price = $html->find('.vi-VR-cvipPrice', 0);
+                }else{
+                    $price = $html->find('#orgPrc', 0 );
                 }
             }
             $price = trim(str_replace($letters, '', $price->plaintext));

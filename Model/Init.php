@@ -16,7 +16,7 @@ define('ROOT_DIR', '');
 define('NO_REPLY_EMAIL', 'noreply@ec2-18-191-240-192.us-east-2.compute.amazonaws.com');
 define('ADMIN_EMAIL', 'JamilyFam5@gmail.com');
 define('ROOT_DOMAIN', 'http://ec2-18-191-240-192.us-east-2.compute.amazonaws.com/ebay-market-compare/');
-define('MARKET_LIMIT_COUNT', 50); // rows of data fetched per execution
+define('MARKET_LIMIT_COUNT', 75); // rows of data fetched per execution
 define('PERCENTAGE_TARGET', 20);
 define('CSV_ROOT', '/var/www/html/ebay-market-compare/');
 require '/var/www/html/ebay-market-compare/vendor/autoload.php';

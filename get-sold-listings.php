@@ -5,13 +5,11 @@ require 'simple_html_dom.php';
 $scraper = new Scraper();
 $listings = $scraper->getListings();
 $dateNow = date('Y-m-d', strtotime('-1 days'));
-echo $dateNow . '<br>';
-$endDateCount = 0;
 foreach($listings as $row){
     $pgn = 1;
     $category = $row['category'];
     $hasListing = true;
-
+    $endDateCount = 0;
     while($hasListing == true){
         // remove this on production
         /*

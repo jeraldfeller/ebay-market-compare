@@ -4,7 +4,7 @@ require '/var/www/html/ebay-market-compare/Model/Scraper.php';
 require '/var/www/html/ebay-market-compare/simple_html_dom.php';
 $searchUrl = 'https://www.amazon.com/s/ref=nb_sb_noss?field-keywords=';
 $scraper = new Scraper();
-$isReady = $scraper->sitesExecutionReady();
+$isReady = $scraper->sitesExecutionReady(false);
 if($isReady == 0) {
     $marketData = $scraper->getMarketData('csv');
     $id = $marketData['id'];
