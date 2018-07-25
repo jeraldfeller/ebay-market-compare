@@ -64,6 +64,8 @@ foreach($listings as $row){
                     $scraper->insertProductListingLinksBulk($insertData);
                 }
             }
+        }else{
+            mail('jeraldfeller@gmail.com', 'Scrape Alert', $url);
         }
         $pgn++;
 
