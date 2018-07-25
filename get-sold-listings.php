@@ -65,7 +65,7 @@ foreach($listings as $row){
                 }
             }
         }else{
-            mail('jeraldfeller@gmail.com', 'Scrape Alert', $url);
+            mail('jeraldfeller@gmail.com', 'Scrape Alert | get-sold-listings', $url);
         }
         $pgn++;
 

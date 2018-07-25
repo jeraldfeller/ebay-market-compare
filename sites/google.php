@@ -38,15 +38,12 @@ if($isReady == 0) {
                         if ($percentage >= PERCENTAGE_TARGET) {
                             $scraper->recordToCsvGoogle($prodId, $price, $directLink, $store);
                         }
-                        echo $prodName . '<br>';
-                        echo $directLink . '<br>';
-                        echo $price . '<br>';
-                        echo $store . '<br>';
-                        echo '<hr>';
                     }
                 }
             }
 
+        }else{
+            mail('jeraldfeller@gmail.com', 'Scrape Alert | google', $url);
         }
     }
 

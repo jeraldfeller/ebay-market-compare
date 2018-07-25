@@ -47,6 +47,8 @@ foreach($productLinks as $row){
             }
         }
 
+    }else{
+        mail('jeraldfeller@gmail.com', 'Scrape Alert | get-product-info', $url);
     }
 
 }

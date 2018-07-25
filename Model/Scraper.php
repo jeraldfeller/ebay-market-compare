@@ -414,6 +414,7 @@ class Scraper
                     $csvData[0],
                     $csvData[1],
                     $csvData[2],
+                    $csvData[3],
                     $ebayPrice,
                     $ebayUrl
                 )
@@ -632,22 +633,22 @@ class Scraper
 
         $csv = CSV_ROOT.'exports/product_list_'.$date.'.csv';
         $file = fopen($csv,"w");
-        fputcsv($file, array('Upc,Ebay Price,Product Name,Ebay Product Link, Store,Store Price, Store Product Link'));
+        fputcsv($file, array('Upc','Ebay', 'Price','Product Name','Ebay Product Link', 'Store','Store Price', 'Store Product Link'));
         fclose($file);
 
         $csv = CSV_ROOT.'exports/google_sheets_'.$date.'.csv';
         $file = fopen($csv,"w");
-        fputcsv($file, array('Upc,Price,Product Title,Store,Ebay Price, Ebay Product Link'));
+        fputcsv($file, array('Upc','Price','Product Title','Store','Ebay Price', 'Ebay Product Link'));
         fclose($file);
 
         $csv = CSV_ROOT.'exports/google_shopping_'.$date.'.csv';
         $file = fopen($csv,"w");
-        fputcsv($file, array('Upc,Price,Product Title,Store,Product Link,Ebay Price,Ebay Product Link'));
+        fputcsv($file, array('Upc','Price','Product Title','Store','Product Link','Ebay Price','Ebay Product Link'));
         fclose($file);
 
         $csv = CSV_ROOT.'exports/no_match_product_list_'.$date.'.csv';
         $file = fopen($csv,"w");
-        fputcsv($file, array('Upc,Ebay Price,Product Name,Ebay Product Link'));
+        fputcsv($file, array('Upc','Ebay Price','Product Name','Ebay Product Link'));
         fclose($file);
 
         $pdo = null;

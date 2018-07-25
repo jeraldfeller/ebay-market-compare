@@ -29,6 +29,8 @@ if($isReady == 0) {
                 echo $directUrl;
                 $scraper->recordProductMarketMatch($id, $prodId, $upc, $price, $ebayPrice, $directUrl);
             }
+        }else{
+            mail('jeraldfeller@gmail.com', 'Scrape Alert | target', $url);
         }
     }
 
