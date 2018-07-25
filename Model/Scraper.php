@@ -401,6 +401,7 @@ class Scraper
         return $return;
     }
     public function recordToCsv($marketId, $prodId, $price, $directLink, $isCsv = false, $csvData = array()){
+        $date = date('Y-m-d');
         $ebayItem = $this->getProductById($prodId);
         $ebayPrice = $ebayItem['product_price'];
         $ebayUrl = $ebayItem['product_url'];
@@ -408,7 +409,7 @@ class Scraper
         $ebayProductName = $ebayItem['product_name'];
         $message ='';
         if(count($isCsv) > 0){
-            $csv = CSV_ROOT.'google_sheets.csv';
+            $csv = CSV_ROOT.'exports/google_sheets_'.$date.'.csv';
             $data[] = implode('","', array(
                     $csvData[0],
                     $csvData[1],
@@ -418,7 +419,7 @@ class Scraper
                 )
             );
         }else{
-            $csv = CSV_ROOT.'product_list.csv';
+            $csv = CSV_ROOT.'exports/product_list_'.$date.'.csv';
             $marketData = $this->getMarketById($marketId);
             $data[] = implode('","', array(
                     $ebayUpc,
@@ -443,12 +444,13 @@ class Scraper
 
 
     public function recordToCsvGoogle($prodId, $price, $directLink, $store){
+        $date = date('Y-m-d');
         $ebayItem = $this->getProductById($prodId);
         $ebayPrice = $ebayItem['product_price'];
         $ebayUrl = $ebayItem['product_url'];
         $ebayUpc = $ebayItem['product_upc'];
         $ebayProductName = $ebayItem['product_name'];
-        $csv = CSV_ROOT.'google_shopping.csv';
+        $csv = CSV_ROOT.'exports/google_shopping_'.$date.'.csv';
         $data[] = implode('","', array(
                 $ebayUpc,
                 $price,
@@ -573,15 +575,17 @@ class Scraper
     }
 
     public function sendOutPut(){
+        $date = date('Y-m-d');
+        $message = '<h2>Ebay Product Reports</h2><br>';
+        $message .= 'Product list: '.ROOT_DOMAIN.'exports/product_list_'.$date.'.csv';
+        $message .= 'No Match Product list: '.ROOT_DOMAIN.'exports/no_match_product_list_'.$date.'.csv';
+        $message .= 'Google Sheets: '.ROOT_DOMAIN.'exports/google_sheets_'.$date.'.csv';
+        $message .= 'Google Shopping: '.ROOT_DOMAIN.'exports/google_shopping_'.$date.'.csv';
         $email = new PHPMailer();
         $email->From      = NO_REPLY_EMAIL;
         $email->FromName      = NO_REPLY_EMAIL;
         $email->Subject   = 'Ebay Product Reports';
-        $email->Body      = 'Please see file attached';
-        $email->AddAttachment( CSV_ROOT.'product_list.csv' , 'product_list' );
-        $email->AddAttachment( CSV_ROOT.'google_sheets.csv' , 'google_sheets' );
-        $email->AddAttachment( CSV_ROOT.'google_shopping.csv' , 'google_shopping' );
-        $email->AddAttachment( CSV_ROOT.'no_match_product_list.csv' , 'no_match_product_list' );
+        $email->Body      = $message;
         $email->IsHTML(true);
         $email->AddAddress( 'jeraldfeller@gmail.com' );
        // $email->AddAddress( ADMIN_EMAIL );
@@ -607,6 +611,7 @@ class Scraper
     }
 
     public function reset(){
+        $date = date('Y-m-d');
         $pdo = $this->getPdo();
         $sql = array(
             'UPDATE `market_sites` SET `offset` = 0',
@@ -624,22 +629,22 @@ class Scraper
         $stmt = $pdo->prepare($sql[$x]);
         $stmt->execute();
 
-        $csv = CSV_ROOT.'/product_list.csv';
+        $csv = CSV_ROOT.'exports/product_list_'.$date.'.csv';
         $file = fopen($csv,"w");
         fputcsv($file, 'Upc,Ebay Price,Product Name,Ebay Product Link, Store,Store Price, Store Product Link');
         fclose($file);
 
-        $csv = CSV_ROOT.'/google_sheets.csv';
+        $csv = CSV_ROOT.'exports/google_sheets_'.$date.'.csv';
         $file = fopen($csv,"w");
         fputcsv($file, 'Upc,Price,Product Title,Store,Ebay Price, Ebay Product Link');
         fclose($file);
 
-        $csv = CSV_ROOT.'/google_shopping.csv';
+        $csv = CSV_ROOT.'exports/google_shopping_'.$date.'.csv';
         $file = fopen($csv,"w");
         fputcsv($file, 'Upc,Price,Product Title,Store,Product Link,Ebay Price,Ebay Product Link');
         fclose($file);
 
-        $csv = CSV_ROOT.'/no_match_product_list.csv';
+        $csv = CSV_ROOT.'exports/no_match_product_list_'.$date.'.csv';
         $file = fopen($csv,"w");
         fputcsv($file, 'Upc,Ebay Price,Product Name,Ebay Product Link');
         fclose($file);
@@ -685,9 +690,9 @@ class Scraper
         }
 
         if($pass == true){
-            $sql = 'UPDATE `process_status` SET `check_count` = (`check_count` + 1) WHERE `id` = 0';
+            $sql = 'UPDATE `process_status` SET `check_count` = (`check_count` + 1) WHERE `id` = 1';
         }else{
-            $sql = 'UPDATE `process_status` SET `check_count` = 0 WHERE `id` = 0';
+            $sql = 'UPDATE `process_status` SET `check_count` = 0 WHERE `id` = 1';
         }
 
         $stmt = $pdo->prepare($sql);
@@ -695,7 +700,7 @@ class Scraper
 
         // check if it pass 2 checks then return true to send the files
 
-        $sql = 'SELECT * FROM `process_status` WHERE `id` = 0';
+        $sql = 'SELECT * FROM `process_status` WHERE `id` = 1';
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
         $p = $stmt->fetch(PDO::FETCH_ASSOC);
