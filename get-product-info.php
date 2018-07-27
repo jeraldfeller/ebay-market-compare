@@ -20,6 +20,9 @@ foreach($productLinks as $row){
                     $price = $html->find('.vi-VR-cvipPrice', 0);
                 }else{
                     $price = $html->find('#orgPrc', 0 );
+                    if(!$price){
+                        $price = $html->find('#mm-saleDscPrc', 0);
+                    }
                 }
             }
             $price = trim(str_replace($letters, '', $price->plaintext));
@@ -49,6 +52,7 @@ foreach($productLinks as $row){
 
     }else{
         mail('jeraldfeller@gmail.com', 'Scrape Alert | get-product-info', $url);
+        $scraper->hasRedirect($id);
     }
 
 }

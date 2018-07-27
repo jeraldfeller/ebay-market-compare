@@ -288,6 +288,14 @@ class Scraper
         return $content;
     }
 
+    public function hasRedirect($id){
+        $pdo = $this->getPdo();
+        $sql = 'UPDATE `product_sold_links` SET `has_redirect` = 1 WHERE `id` = '.$id;
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+        $pdo = null;
+        return true;
+    }
     public function recordProductInfo($subId, $name, $url, $upc, $price){
         $dateTime = date('Y-m-d H:i:s');
         $pdo = $this->getPdo();
@@ -457,9 +465,9 @@ class Scraper
                 $price,
                 html_entity_decode($ebayProductName),
                 $store,
-                $directLink,
+                html_entity_decode($directLink),
                 $ebayPrice,
-                $ebayUrl
+                html_entity_decode($ebayUrl)
             )
         );
         $file = fopen($csv,"a");
@@ -687,7 +695,7 @@ class Scraper
         $pass = true;
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
             $offset = $row['offset'];
-            if($offset != $prodCount){
+            if($offset < $prodCount){
                 $pass = false;
                 break;
             }

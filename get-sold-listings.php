@@ -5,7 +5,9 @@ require 'simple_html_dom.php';
 $scraper = new Scraper();
 $listings = $scraper->getListings();
 $dateNow = date('Y-m-d', strtotime('-1 days'));
+
 foreach($listings as $row){
+    echo 'Date Now: ' .$dateNow . '<br>';
     $pgn = 1;
     $category = $row['category'];
     $hasListing = true;
@@ -19,14 +21,9 @@ foreach($listings as $row){
         }
         */
 
-        if($endDateCount == 5){
-            $hasListing = false;
-        }
+
         $id = $row['id'];
         $url = $row['url'].'?LH_ItemCondition=1000&LH_Sold=1&listingOnly=1&rt=nc&_dmd=2&_sop=13&_pgn='.$pgn;
-        echo $category .'<br>';
-        echo $url .'<br>';
-
         $htmlData = $scraper->curlToEbay($url, null);
         if($htmlData['html']){
             echo '*<br>';
@@ -48,14 +45,15 @@ foreach($listings as $row){
 
                         if($endDate >= $dateNow){
                             if($endDate == $dateNow){
-                                echo $endDate . '<br>';
                                 $insertData[] = array($id, $prodLink, 0, $endDate);
                                 //$scraper->insertProductListingLinks($id, $prodLink, 0, $endDate);
                             }
                         }else{
                             $endDateCount++;
+                            if($endDateCount >= 5){
+                                $hasListing = false;
+                            }
                         }
-
                     }
                 }
 
@@ -65,11 +63,14 @@ foreach($listings as $row){
                 }
             }
         }else{
-            mail('jeraldfeller@gmail.com', 'Scrape Alert | get-sold-listings', $url);
+            mail('jeraldfeller@gmail.com', 'Scrape Alert | get-sold-listings', $url . "\r\n".$endDateCount);
         }
         $pgn++;
-
+        if($pgn == 1000){
+            mail('jeraldfeller@gmail.com', 'Scrape Alert | get-sold-listings', $url . "\r\n".$endDateCount);
+        }
     }
+
 
 
 }
