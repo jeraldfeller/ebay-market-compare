@@ -104,6 +104,7 @@ class Scraper
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
         curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE);
+        curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
         $contents = curl_exec($curl);
         curl_close($curl);
         return array('html' => $contents);
@@ -641,7 +642,7 @@ class Scraper
 
         $csv = CSV_ROOT.'exports/product_list_'.$date.'.csv';
         $file = fopen($csv,"w");
-        fputcsv($file, array('Upc','Ebay', 'Price','Product Name','Ebay Product Link', 'Store','Store Price', 'Store Product Link'));
+        fputcsv($file, array('Upc','Ebay Price','Product Name','Ebay Product Link', 'Store','Store Price', 'Store Product Link'));
         fclose($file);
 
         $csv = CSV_ROOT.'exports/google_sheets_'.$date.'.csv';
