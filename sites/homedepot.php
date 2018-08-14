@@ -2,6 +2,7 @@
 require '/var/www/html/ebay-market-compare/Model/Init.php';
 require '/var/www/html/ebay-market-compare/Model/Scraper.php';
 require '/var/www/html/ebay-market-compare/simple_html_dom.php';
+
 $searchUrl = 'https://www.homedepot.com/s/';
 $scraper = new Scraper();
 $isReady = $scraper->sitesExecutionReady();
@@ -24,18 +25,37 @@ if($isReady == 0) {
             $match = $html->find('.pod-inner', 0);
             if ($match) {
                 $directUrl = $mainUrl . $match->find('a', 0)->getAttribute('href');
+                $path = explode('/', parse_url($directUrl)['path']);
+                $productIdentification = $path[count($path)-1];
                 $price = $match->find('.checkbox-btn__input', 0);
                 if ($price) {
                     $price = trim(str_replace($letters, '', $price->getAttribute('data-price')));
-                    $scraper->recordProductMarketMatch($id, $prodId, $upc, $price, $ebayPrice, $directUrl);
+                    $scraper->recordProductMarketMatch($id, $prodId, $upc, $price, $ebayPrice, $directUrl, $productIdentification);
                 }
 
             }
+            /*else{
+                echo $url .'<br>';
+                $productIdentification = $html->find('#product_internet_number', 0);
+                if($productIdentification){
+                    $productIdentification = $productIdentification->plaintext;
+                }else{
+                    $productIdentification = 0;
+                }
+
+                $price1 = $html->find('.price__dollars', 0);
+                if($price1){
+                    $price2 = $html->find('.price__cents', 0);
+                    $price = $price1->plaintext.'.'.$price2->plaintext;
+                    $directUrl = $url;
+                    $scraper->recordProductMarketMatch($id, $prodId, $upc, $price, $ebayPrice, $directUrl, $productIdentification);
+                }
+
+            }*/
         }else{
-            mail('jeraldfeller@gmail.com', 'Scrape Alert | homedepot', $url);
+            //   mail('jeraldfeller@gmail.com', 'Scrape Alert | homedepot', $url);
         }
     }
-
     if (count($upcList) > 0) {
         $scraper->updateMarketOffset($id, count($upcList));
     }

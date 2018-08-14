@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3669cf02-e67f-448d-88fe-f32a91a5b536" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/Init.php" afterPath="$PROJECT_DIR$/Model/Init.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/Scraper.php" afterPath="$PROJECT_DIR$/Model/Scraper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/get-sold-listings.php" afterPath="$PROJECT_DIR$/get-sold-listings.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/amazon.php" afterPath="$PROJECT_DIR$/sites/amazon.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/google.php" afterPath="$PROJECT_DIR$/sites/google.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/homedepot.php" afterPath="$PROJECT_DIR$/sites/homedepot.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/newegg.php" afterPath="$PROJECT_DIR$/sites/newegg.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/target.php" afterPath="$PROJECT_DIR$/sites/target.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/tigerdirect.php" afterPath="$PROJECT_DIR$/sites/tigerdirect.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/walmart.php" afterPath="$PROJECT_DIR$/sites/walmart.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,123 +26,132 @@
       <file leaf-file-name="Scraper.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/Scraper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-172">
-              <caret line="111" column="26" lean-forward="false" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="26" />
+            <state relative-caret-position="204">
+              <caret line="96" column="30" lean-forward="false" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="30" />
               <folding>
                 <element signature="e#6#40#0#PHP" expanded="true" />
-                <marker date="1532697831471" expanded="true" signature="5173:5197" ph="INSERT INTO `categories`... " />
-                <marker date="1532697831471" expanded="true" signature="5173:5212" ph="INSERT INTO `categories`... " />
-                <marker date="1532697831471" expanded="true" signature="5173:5229" ph="INSERT INTO `categories`... " />
-                <marker date="1532697831471" expanded="true" signature="5173:5231" ph="INSERT INTO `categories`... " />
-                <marker date="1532697831471" expanded="true" signature="5173:5254" ph="INSERT INTO `categories`... " />
-                <marker date="1532697831471" expanded="true" signature="5173:5256" ph="INSERT INTO `categories`... " />
-                <marker date="1532697831471" expanded="true" signature="5173:5266" ph="INSERT INTO `categories`... " />
-                <marker date="1532697831471" expanded="true" signature="5173:5267" ph="INSERT INTO `categories`... " />
-                <marker date="1532697831471" expanded="true" signature="5173:5304" ph="INSERT INTO `categories`... " />
-                <marker date="1532697831471" expanded="true" signature="5483:5535" ph="SELECT * FRO... sub_categories" />
-                <marker date="1532697831471" expanded="true" signature="5483:5536" ph="SELECT * FRO... sub_categories" />
-                <marker date="1532697831471" expanded="true" signature="5483:5560" ph="SELECT * FRO... sub_categories" />
-                <marker date="1532697831471" expanded="true" signature="5483:5562" ph="SELECT * FRO... sub_categories" />
-                <marker date="1532697831471" expanded="true" signature="5483:5578" ph="SELECT * FRO... sub_categories" />
-                <marker date="1532697831471" expanded="true" signature="5483:6121" ph="SELECT * FRO... sub_categories" />
-                <marker date="1532697831471" expanded="true" signature="5709:5832" ph="INSERT INTO `sub_categories`... " />
-                <marker date="1532697831471" expanded="true" signature="5709:5833" ph="INSERT INTO `categories`... " />
-                <marker date="1532697831471" expanded="true" signature="5709:5850" ph="INSERT INTO `categories`... " />
-                <marker date="1532697831471" expanded="true" signature="5709:5851" ph="INSERT INTO `categories`... " />
-                <marker date="1532697831471" expanded="true" signature="5960:6011" ph="UPDATE `cate... " />
-                <marker date="1532697831471" expanded="true" signature="5960:6012" ph="UPDATE `cate... " />
-                <marker date="1532697831471" expanded="true" signature="6245:6348" ph="SELECT * FRO... third_level_categories" />
-                <marker date="1532697831471" expanded="true" signature="6479:6610" ph="INSERT INTO `third_level_categories`... " />
-                <marker date="1532697831471" expanded="true" signature="6806:6871" ph="SELECT * FRO... categories" />
-                <marker date="1532697831471" expanded="true" signature="7218:7283" ph="SELECT * FRO... sub_categories" />
-                <marker date="1532697831471" expanded="true" signature="7218:7284" ph="SELECT * FRO... sub_categories" />
-                <marker date="1532697831471" expanded="true" signature="7218:7285" ph="SELECT * FRO... sub_categories" />
-                <marker date="1532697831471" expanded="true" signature="7218:7292" ph="SELECT * FRO... sub_categories" />
-                <marker date="1532697831471" expanded="true" signature="7218:7293" ph="SELECT * FRO... sub_categories" />
-                <marker date="1532697831471" expanded="true" signature="7519:7548" ph="UPDATE `sub_... " />
-                <marker date="1532697831471" expanded="true" signature="7519:7557" ph="UPDATE `sub_... " />
-                <marker date="1532697831471" expanded="true" signature="7519:7572" ph="UPDATE `sub_... " />
-                <marker date="1532697831471" expanded="true" signature="7519:7573" ph="UPDATE `sub_... " />
-                <marker date="1532697831471" expanded="true" signature="7864:7990" ph="INSERT INTO `product_sold_links`... " />
-                <marker date="1532697831471" expanded="true" signature="7864:8003" ph="INSERT INTO `product_sold_links`... " />
-                <marker date="1532697831471" expanded="true" signature="7864:8007" ph="INSERT INTO `product_sold_links`... " />
-                <marker date="1532697831471" expanded="true" signature="7864:8020" ph="INSERT INTO `product_sold_links`... " />
-                <marker date="1532697831471" expanded="true" signature="8601:8701" ph="INSERT INTO `product_sold_links`... " />
-                <marker date="1532697831471" expanded="true" signature="8601:8725" ph="INSERT INTO `product_sold_links`... " />
-                <marker date="1532697831471" expanded="true" signature="8601:8734" ph="INSERT INTO `product_sold_links`... " />
-                <marker date="1532697831471" expanded="true" signature="8601:8752" ph="INSERT INTO `product_sold_links`... " />
-                <marker date="1532697831471" expanded="true" signature="8601:8790" ph="INSERT INTO `product_sold_links`... " />
-                <marker date="1532697831471" expanded="true" signature="8958:9044" ph="SELECT * FRO... product_sold_links" />
-                <marker date="1532697831471" expanded="true" signature="8958:9051" ph="SELECT DISTI... product_sold_links" />
-                <marker date="1532697831471" expanded="true" signature="8958:9054" ph="SELECT DISTI... product_sold_links" />
-                <marker date="1532697831471" expanded="true" signature="9280:9338" ph="UPDATE `prod... " />
-                <marker date="1532697831471" expanded="true" signature="9590:9640" ph="UPDATE `prod... " />
-                <marker date="1532697831471" expanded="true" signature="9590:9654" ph="UPDATE `prod... " />
-                <marker date="1532697831471" expanded="true" signature="9935:10044" ph="INSERT INTO `products`... " />
-                <marker date="1532697831471" expanded="true" signature="9935:10132" ph="INSERT INTO `products`... " />
-                <marker date="1532697831471" expanded="true" signature="9935:10177" ph="INSERT INTO `products`... " />
-                <marker date="1532697831471" expanded="true" signature="9935:10188" ph="INSERT INTO `products`... " />
-                <marker date="1532697831471" expanded="true" signature="9935:10211" ph="INSERT INTO `products`... " />
-                <marker date="1532697831471" expanded="true" signature="9935:10222" ph="INSERT INTO `products`... " />
-                <marker date="1532697831471" expanded="true" signature="9935:10224" ph="INSERT INTO `products`... " />
-                <marker date="1532697831471" expanded="true" signature="9935:10238" ph="INSERT INTO `products`... " />
-                <marker date="1532697831471" expanded="true" signature="9935:10254" ph="INSERT INTO `product_sold_links`... " />
-                <marker date="1532697831471" expanded="true" signature="10469:10534" ph="SELECT * FRO... categories" />
-                <marker date="1532697831471" expanded="true" signature="10469:10547" ph="SELECT * FRO... categories" />
-                <marker date="1532697831471" expanded="true" signature="10469:10604" ph="SELECT * FRO... categories" />
-                <marker date="1532697831471" expanded="true" signature="10898:10955" ph="SELECT * FRO...  WHERE " />
-                <marker date="1532697831471" expanded="true" signature="11213:11255" ph="SELECT * FRO... products" />
-                <marker date="1532697831471" expanded="true" signature="11213:11261" ph="SELECT * FRO... products" />
-                <marker date="1532697831471" expanded="true" signature="11213:11262" ph="SELECT * FRO... products" />
-                <marker date="1532697831471" expanded="true" signature="11213:11274" ph="SELECT * FRO... products" />
-                <marker date="1532697831471" expanded="true" signature="11961:12258" ph="INSERT INTO `market_product_match`... " />
-                <marker date="1532697831471" expanded="true" signature="12369:12420" ph="UPDATE `prod... " />
-                <marker date="1532697831471" expanded="true" signature="12720:12785" ph="SELECT * FRO... categories" />
-                <marker date="1532697831471" expanded="true" signature="13060:13129" ph="SELECT * FRO... products" />
-                <marker date="1532697831471" expanded="true" signature="13817:13848" ph="..." />
-                <marker date="1532697831471" expanded="true" signature="16102:16855" ph="..." />
-                <marker date="1532697831471" expanded="true" signature="16133:16446" ph="..." />
-                <marker date="1532697831471" expanded="true" signature="16477:16762" ph="..." />
-                <marker date="1532697831471" expanded="true" signature="16477:16822" ph="..." />
-                <marker date="1532697831471" expanded="true" signature="16975:17873" ph="..." />
-                <marker date="1532697831471" expanded="true" signature="17006:17380" ph="..." />
-                <marker date="1532697831471" expanded="true" signature="17411:17600" ph="..." />
-                <marker date="1532697831471" expanded="true" signature="17411:17840" ph="..." />
-                <marker date="1532697831471" expanded="true" signature="18715:18717" ph="..." />
-                <marker date="1532697831471" expanded="true" signature="18715:19559" ph="..." />
-                <marker date="1532697831471" expanded="true" signature="18746:19109" ph="..." />
-                <marker date="1532697831471" expanded="true" signature="19140:19466" ph="..." />
-                <marker date="1532697831471" expanded="true" signature="19140:19526" ph="..." />
-                <marker date="1532697831471" expanded="true" signature="20099:20676" ph="..." />
-                <marker date="1532697831471" expanded="true" signature="20980:21035" ph="UPDATE `proc... " />
-                <marker date="1532697831471" expanded="true" signature="20980:21036" ph="UPDATE `proc... " />
-                <marker date="1532697831471" expanded="true" signature="21278:21352" ph="UPDATE `mark... " />
-                <marker date="1532697831471" expanded="true" signature="21577:21615" ph="UPDATE `mark... " />
-                <marker date="1532697831471" expanded="true" signature="21631:21665" ph="DELETE FROM " />
-                <marker date="1532697831471" expanded="true" signature="21681:21703" ph="DELETE FROM " />
-                <marker date="1532697831471" expanded="true" signature="21719:21751" ph="DELETE FROM " />
-                <marker date="1532697831471" expanded="true" signature="21767:21807" ph="UPDATE `sub_... " />
-                <marker date="1532697831471" expanded="true" signature="21767:21827" ph="UPDATE `sub_... " />
-                <marker date="1532697831471" expanded="true" signature="21988:22048" ph="UPDATE `proc... " />
-                <marker date="1532697831471" expanded="true" signature="23183:23247" ph="SELECT * FRO... products" />
-                <marker date="1532697831471" expanded="true" signature="23630:23674" ph="SELECT count... products" />
-                <marker date="1532697831471" expanded="true" signature="23822:23857" ph="SELECT `offs... market_sites" />
-                <marker date="1532697831471" expanded="true" signature="24202:24280" ph="UPDATE `proc... " />
-                <marker date="1532697831471" expanded="true" signature="24318:24378" ph="UPDATE `proc... " />
-                <marker date="1532697831471" expanded="true" signature="24545:24590" ph="SELECT * FRO... process_status" />
-                <marker date="1532697831471" expanded="true" signature="25005:25092" ph="SELECT count... sub_categories" />
-                <marker date="1532697831471" expanded="true" signature="25316:25360" ph="SELECT count... products" />
-                <marker date="1532697831471" expanded="true" signature="25524:25613" ph="SELECT `offs... market_sites" />
+                <marker date="1534225133488" expanded="true" signature="6050:6074" ph="INSERT INTO `categories`... " />
+                <marker date="1534225133488" expanded="true" signature="6050:6089" ph="INSERT INTO `categories`... " />
+                <marker date="1534225133488" expanded="true" signature="6050:6106" ph="INSERT INTO `categories`... " />
+                <marker date="1534225133488" expanded="true" signature="6050:6108" ph="INSERT INTO `categories`... " />
+                <marker date="1534225133488" expanded="true" signature="6050:6131" ph="INSERT INTO `categories`... " />
+                <marker date="1534225133488" expanded="true" signature="6050:6133" ph="INSERT INTO `categories`... " />
+                <marker date="1534225133488" expanded="true" signature="6050:6143" ph="INSERT INTO `categories`... " />
+                <marker date="1534225133488" expanded="true" signature="6050:6144" ph="INSERT INTO `categories`... " />
+                <marker date="1534225133488" expanded="true" signature="6050:6181" ph="INSERT INTO `categories`... " />
+                <marker date="1534225133488" expanded="true" signature="6360:6412" ph="SELECT * FRO... sub_categories" />
+                <marker date="1534225133488" expanded="true" signature="6360:6413" ph="SELECT * FRO... sub_categories" />
+                <marker date="1534225133488" expanded="true" signature="6360:6437" ph="SELECT * FRO... sub_categories" />
+                <marker date="1534225133488" expanded="true" signature="6360:6439" ph="SELECT * FRO... sub_categories" />
+                <marker date="1534225133488" expanded="true" signature="6360:6455" ph="SELECT * FRO... sub_categories" />
+                <marker date="1534225133488" expanded="true" signature="6360:6998" ph="SELECT * FRO... sub_categories" />
+                <marker date="1534225133488" expanded="true" signature="6586:6709" ph="INSERT INTO `sub_categories`... " />
+                <marker date="1534225133488" expanded="true" signature="6586:6710" ph="INSERT INTO `categories`... " />
+                <marker date="1534225133488" expanded="true" signature="6586:6727" ph="INSERT INTO `categories`... " />
+                <marker date="1534225133488" expanded="true" signature="6586:6728" ph="INSERT INTO `categories`... " />
+                <marker date="1534225133488" expanded="true" signature="6837:6888" ph="UPDATE `cate... " />
+                <marker date="1534225133488" expanded="true" signature="6837:6889" ph="UPDATE `cate... " />
+                <marker date="1534225133488" expanded="true" signature="7122:7225" ph="SELECT * FRO... third_level_categories" />
+                <marker date="1534225133488" expanded="true" signature="7356:7487" ph="INSERT INTO `third_level_categories`... " />
+                <marker date="1534225133488" expanded="true" signature="7683:7748" ph="SELECT * FRO... categories" />
+                <marker date="1534225133488" expanded="true" signature="8095:8160" ph="SELECT * FRO... sub_categories" />
+                <marker date="1534225133488" expanded="true" signature="8095:8161" ph="SELECT * FRO... sub_categories" />
+                <marker date="1534225133488" expanded="true" signature="8095:8162" ph="SELECT * FRO... sub_categories" />
+                <marker date="1534225133488" expanded="true" signature="8095:8169" ph="SELECT * FRO... sub_categories" />
+                <marker date="1534225133488" expanded="true" signature="8095:8170" ph="SELECT * FRO... sub_categories" />
+                <marker date="1534225133488" expanded="true" signature="8396:8425" ph="UPDATE `sub_... " />
+                <marker date="1534225133488" expanded="true" signature="8396:8434" ph="UPDATE `sub_... " />
+                <marker date="1534225133488" expanded="true" signature="8396:8449" ph="UPDATE `sub_... " />
+                <marker date="1534225133488" expanded="true" signature="8396:8450" ph="UPDATE `sub_... " />
+                <marker date="1534225133488" expanded="true" signature="8741:8867" ph="INSERT INTO `product_sold_links`... " />
+                <marker date="1534225133488" expanded="true" signature="8741:8880" ph="INSERT INTO `product_sold_links`... " />
+                <marker date="1534225133488" expanded="true" signature="8741:8884" ph="INSERT INTO `product_sold_links`... " />
+                <marker date="1534225133488" expanded="true" signature="8741:8897" ph="INSERT INTO `product_sold_links`... " />
+                <marker date="1534225133488" expanded="true" signature="9478:9578" ph="INSERT INTO `product_sold_links`... " />
+                <marker date="1534225133488" expanded="true" signature="9478:9602" ph="INSERT INTO `product_sold_links`... " />
+                <marker date="1534225133488" expanded="true" signature="9478:9611" ph="INSERT INTO `product_sold_links`... " />
+                <marker date="1534225133488" expanded="true" signature="9478:9629" ph="INSERT INTO `product_sold_links`... " />
+                <marker date="1534225133488" expanded="true" signature="9478:9667" ph="INSERT INTO `product_sold_links`... " />
+                <marker date="1534225133488" expanded="true" signature="9835:9921" ph="SELECT * FRO... product_sold_links" />
+                <marker date="1534225133488" expanded="true" signature="9835:9928" ph="SELECT DISTI... product_sold_links" />
+                <marker date="1534225133488" expanded="true" signature="9835:9931" ph="SELECT DISTI... product_sold_links" />
+                <marker date="1534225133488" expanded="true" signature="10157:10215" ph="UPDATE `prod... " />
+                <marker date="1534225133488" expanded="true" signature="10467:10517" ph="UPDATE `prod... " />
+                <marker date="1534225133488" expanded="true" signature="10467:10531" ph="UPDATE `prod... " />
+                <marker date="1534225133488" expanded="true" signature="10812:10921" ph="INSERT INTO `products`... " />
+                <marker date="1534225133488" expanded="true" signature="10812:11009" ph="INSERT INTO `products`... " />
+                <marker date="1534225133488" expanded="true" signature="10812:11054" ph="INSERT INTO `products`... " />
+                <marker date="1534225133488" expanded="true" signature="10812:11065" ph="INSERT INTO `products`... " />
+                <marker date="1534225133488" expanded="true" signature="10812:11088" ph="INSERT INTO `products`... " />
+                <marker date="1534225133488" expanded="true" signature="10812:11099" ph="INSERT INTO `products`... " />
+                <marker date="1534225133488" expanded="true" signature="10812:11101" ph="INSERT INTO `products`... " />
+                <marker date="1534225133488" expanded="true" signature="10812:11115" ph="INSERT INTO `products`... " />
+                <marker date="1534225133488" expanded="true" signature="10812:11131" ph="INSERT INTO `product_sold_links`... " />
+                <marker date="1534225133488" expanded="true" signature="11346:11411" ph="SELECT * FRO... categories" />
+                <marker date="1534225133488" expanded="true" signature="11346:11424" ph="SELECT * FRO... categories" />
+                <marker date="1534225133488" expanded="true" signature="11346:11481" ph="SELECT * FRO... categories" />
+                <marker date="1534225133488" expanded="true" signature="11775:11832" ph="SELECT * FRO...  WHERE " />
+                <marker date="1534225133488" expanded="true" signature="12090:12132" ph="SELECT * FRO... products" />
+                <marker date="1534225133488" expanded="true" signature="12090:12138" ph="SELECT * FRO... products" />
+                <marker date="1534225133488" expanded="true" signature="12090:12139" ph="SELECT * FRO... products" />
+                <marker date="1534225133488" expanded="true" signature="12090:12151" ph="SELECT * FRO... products" />
+                <marker date="1534225133488" expanded="true" signature="12863:13229" ph="INSERT INTO `market_product_match`... " />
+                <marker date="1534225133488" expanded="true" signature="13340:13391" ph="UPDATE `prod... " />
+                <marker date="1534225133488" expanded="true" signature="13712:13777" ph="SELECT * FRO... categories" />
+                <marker date="1534225133488" expanded="true" signature="14052:14121" ph="SELECT * FRO... products" />
+                <marker date="1534225133488" expanded="true" signature="17447:18200" ph="..." />
+                <marker date="1534225133488" expanded="true" signature="17478:17791" ph="..." />
+                <marker date="1534225133488" expanded="true" signature="17822:18107" ph="..." />
+                <marker date="1534225133488" expanded="true" signature="17822:18167" ph="..." />
+                <marker date="1534225133488" expanded="true" signature="18320:19218" ph="..." />
+                <marker date="1534225133488" expanded="true" signature="18351:18725" ph="..." />
+                <marker date="1534225133488" expanded="true" signature="18756:18945" ph="..." />
+                <marker date="1534225133488" expanded="true" signature="18756:19185" ph="..." />
+                <marker date="1534225133488" expanded="true" signature="20060:20062" ph="..." />
+                <marker date="1534225133488" expanded="true" signature="20060:20904" ph="..." />
+                <marker date="1534225133488" expanded="true" signature="20091:20454" ph="..." />
+                <marker date="1534225133488" expanded="true" signature="20485:20811" ph="..." />
+                <marker date="1534225133488" expanded="true" signature="20485:20871" ph="..." />
+                <marker date="1534225133488" expanded="true" signature="21444:22021" ph="..." />
+                <marker date="1534225133488" expanded="true" signature="22325:22380" ph="UPDATE `proc... " />
+                <marker date="1534225133488" expanded="true" signature="22325:22381" ph="UPDATE `proc... " />
+                <marker date="1534225133488" expanded="true" signature="22623:22697" ph="UPDATE `mark... " />
+                <marker date="1534225133488" expanded="true" signature="22922:22960" ph="UPDATE `mark... " />
+                <marker date="1534225133488" expanded="true" signature="22976:23010" ph="DELETE FROM " />
+                <marker date="1534225133488" expanded="true" signature="23026:23048" ph="DELETE FROM " />
+                <marker date="1534225133488" expanded="true" signature="23064:23096" ph="DELETE FROM " />
+                <marker date="1534225133488" expanded="true" signature="23112:23152" ph="UPDATE `sub_... " />
+                <marker date="1534225133488" expanded="true" signature="23112:23172" ph="UPDATE `sub_... " />
+                <marker date="1534225133488" expanded="true" signature="23333:23393" ph="UPDATE `proc... " />
+                <marker date="1534225133488" expanded="true" signature="24543:24607" ph="SELECT * FRO... products" />
+                <marker date="1534225133488" expanded="true" signature="24990:25034" ph="SELECT count... products" />
+                <marker date="1534225133488" expanded="true" signature="25182:25217" ph="SELECT `offs... market_sites" />
+                <marker date="1534225133488" expanded="true" signature="25562:25640" ph="UPDATE `proc... " />
+                <marker date="1534225133488" expanded="true" signature="25678:25738" ph="UPDATE `proc... " />
+                <marker date="1534225133488" expanded="true" signature="25905:25950" ph="SELECT * FRO... process_status" />
+                <marker date="1534225133488" expanded="true" signature="26365:26452" ph="SELECT count... sub_categories" />
+                <marker date="1534225133488" expanded="true" signature="26676:26720" ph="SELECT count... products" />
+                <marker date="1534225133488" expanded="true" signature="26884:26973" ph="SELECT `offs... market_sites" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="get-sold-listings.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/get-sold-listings.php">
+      <file leaf-file-name="Init.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Model/Init.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="33" />
+            <state relative-caret-position="374">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="walmart.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sites/walmart.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="329">
+              <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -146,28 +160,28 @@
       <file leaf-file-name="get-product-info.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/get-product-info.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-11">
-              <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+            <state relative-caret-position="448">
+              <caret line="33" column="43" lean-forward="true" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.php">
+      <file leaf-file-name="target.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/target.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="38" />
+            <state relative-caret-position="278">
+              <caret line="28" column="38" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Init.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Model/Init.php">
+      <file leaf-file-name="amazon.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/amazon.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+            <state relative-caret-position="-674">
+              <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -176,8 +190,38 @@
       <file leaf-file-name="homedepot.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/homedepot.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="36" />
+            <state relative-caret-position="448">
+              <caret line="59" column="2" lean-forward="true" selection-start-line="59" selection-start-column="2" selection-end-line="59" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="newegg.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/newegg.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="29" column="58" lean-forward="true" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tigerdirect.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/tigerdirect.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="431">
+              <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="google.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/google.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="38" column="55" lean-forward="true" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -194,10 +238,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>item-title</find>
-      <find>$directLink</find>
-      <find>products</find>
-      <find>curlToAmazon</find>
       <find>$prodId</find>
       <find>sendMail</find>
       <find>getNoMatchProducts</find>
@@ -206,24 +246,28 @@
       <find>send</find>
       <find>recordProduct</find>
       <find>sendOutput</find>
-      <find>sendOutPut</find>
       <find>getProducts</find>
       <find>Ready</find>
       <find>getMarketData</find>
-      <find>recordProductMarketMatch</find>
       <find>sitesExecutionReady</find>
-      <find>recordToCsv</find>
       <find>recordProductInfo</find>
       <find>isReadyToSendOutput</find>
       <find>recordToCsvGoogle</find>
       <find>hasRedirect</find>
       <find>mm-saleDscPrc</find>
       <find>$hasListing</find>
-      <find>getProductSoldLinks</find>
-      <find>curlToEbay</find>
-      <find>getListings</find>
       <find>reset</find>
       <find>curlTo</find>
+      <find>getListings</find>
+      <find>getProductSoldLinks</find>
+      <find>sendOutPut</find>
+      <find>curlToEbay</find>
+      <find>curlToGoogle</find>
+      <find>NO_REPLY_EMAIL</find>
+      <find>recordProductMarketMatch</find>
+      <find>recordToCsv</find>
+      <find>getProductById</find>
+      <find>curlToHomeDepot</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -250,20 +294,20 @@
         <option value="$PROJECT_DIR$/product_list.csv" />
         <option value="$PROJECT_DIR$/no_match_product_list.csv" />
         <option value="$PROJECT_DIR$/send-output.php" />
-        <option value="$PROJECT_DIR$/reset.php" />
         <option value="$PROJECT_DIR$/sites/csv.php" />
-        <option value="$PROJECT_DIR$/sites/amazon.php" />
-        <option value="$PROJECT_DIR$/sites/homedepot.php" />
-        <option value="$PROJECT_DIR$/sites/newegg.php" />
-        <option value="$PROJECT_DIR$/sites/target.php" />
-        <option value="$PROJECT_DIR$/sites/tigerdirect.php" />
-        <option value="$PROJECT_DIR$/sites/walmart.php" />
-        <option value="$PROJECT_DIR$/sites/google.php" />
-        <option value="$PROJECT_DIR$/get-product-info.php" />
         <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/get-sold-listings.php" />
+        <option value="$PROJECT_DIR$/sites/google.php" />
+        <option value="$PROJECT_DIR$/get-product-info.php" />
+        <option value="$PROJECT_DIR$/reset.php" />
+        <option value="$PROJECT_DIR$/sites/walmart.php" />
+        <option value="$PROJECT_DIR$/sites/target.php" />
+        <option value="$PROJECT_DIR$/sites/amazon.php" />
         <option value="$PROJECT_DIR$/Model/Scraper.php" />
+        <option value="$PROJECT_DIR$/sites/newegg.php" />
         <option value="$PROJECT_DIR$/Model/Init.php" />
+        <option value="$PROJECT_DIR$/sites/homedepot.php" />
+        <option value="$PROJECT_DIR$/sites/tigerdirect.php" />
       </list>
     </option>
   </component>
@@ -444,12 +488,17 @@
       <workItem from="1531879656404" duration="55103000" />
       <workItem from="1532301312282" duration="37528000" />
       <workItem from="1532490191208" duration="24925000" />
-      <workItem from="1532668420269" duration="8277000" />
+      <workItem from="1532668420269" duration="10183000" />
+      <workItem from="1532754933908" duration="10293000" />
+      <workItem from="1532902361211" duration="1439000" />
+      <workItem from="1533073980523" duration="1501000" />
+      <workItem from="1533594874958" duration="22000" />
+      <workItem from="1534218150302" duration="10086000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176788000" />
+    <option name="totallyTimeSpent" value="202035000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -460,12 +509,12 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -481,18 +530,18 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23572475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17130308" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -503,7 +552,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -528,9 +577,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="48" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="19" selection-end-column="48" />
-          <folding>
-            <marker date="1531781135055" expanded="true" signature="361:387" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -546,7 +592,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -571,109 +616,108 @@
           <caret line="131" column="30" lean-forward="false" selection-start-line="131" selection-start-column="30" selection-end-line="131" selection-end-column="30" />
           <folding>
             <element signature="e#6#40#0#PHP" expanded="true" />
-            <marker date="1532697831471" expanded="true" signature="5173:5197" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5212" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5229" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5231" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5254" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5256" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5266" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5267" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5304" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5483:5535" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5483:5536" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5483:5560" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5483:5562" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5483:5578" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5483:6121" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5709:5832" ph="INSERT INTO `sub_categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5709:5833" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5709:5850" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5709:5851" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5960:6011" ph="UPDATE `cate... " />
-            <marker date="1532697831471" expanded="true" signature="5960:6012" ph="UPDATE `cate... " />
-            <marker date="1532697831471" expanded="true" signature="6245:6348" ph="SELECT * FRO... third_level_categories" />
-            <marker date="1532697831471" expanded="true" signature="6479:6610" ph="INSERT INTO `third_level_categories`... " />
-            <marker date="1532697831471" expanded="true" signature="6806:6871" ph="SELECT * FRO... categories" />
-            <marker date="1532697831471" expanded="true" signature="7218:7283" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="7218:7284" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="7218:7285" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="7218:7292" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="7218:7293" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="7519:7548" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="7519:7557" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="7519:7572" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="7519:7573" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="7864:7990" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="7864:8003" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="7864:8007" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="7864:8020" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8601:8701" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8601:8725" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8601:8734" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8601:8752" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8601:8790" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8958:9044" ph="SELECT * FRO... product_sold_links" />
-            <marker date="1532697831471" expanded="true" signature="8958:9051" ph="SELECT DISTI... product_sold_links" />
-            <marker date="1532697831471" expanded="true" signature="8958:9054" ph="SELECT DISTI... product_sold_links" />
-            <marker date="1532697831471" expanded="true" signature="9280:9338" ph="UPDATE `prod... " />
-            <marker date="1532697831471" expanded="true" signature="9590:9640" ph="UPDATE `prod... " />
-            <marker date="1532697831471" expanded="true" signature="9590:9654" ph="UPDATE `prod... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10044" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10132" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10177" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10188" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10211" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10222" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10224" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10238" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10254" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="10469:10534" ph="SELECT * FRO... categories" />
-            <marker date="1532697831471" expanded="true" signature="10469:10547" ph="SELECT * FRO... categories" />
-            <marker date="1532697831471" expanded="true" signature="10469:10604" ph="SELECT * FRO... categories" />
-            <marker date="1532697831471" expanded="true" signature="10898:10955" ph="SELECT * FRO...  WHERE " />
-            <marker date="1532697831471" expanded="true" signature="11213:11255" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="11213:11261" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="11213:11262" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="11213:11274" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="11961:12258" ph="INSERT INTO `market_product_match`... " />
-            <marker date="1532697831471" expanded="true" signature="12369:12420" ph="UPDATE `prod... " />
-            <marker date="1532697831471" expanded="true" signature="12720:12785" ph="SELECT * FRO... categories" />
-            <marker date="1532697831471" expanded="true" signature="13060:13129" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="13817:13848" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="16102:16855" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="16133:16446" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="16477:16762" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="16477:16822" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="16975:17873" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="17006:17380" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="17411:17600" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="17411:17840" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="18715:18717" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="18715:19559" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="18746:19109" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="19140:19466" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="19140:19526" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="20099:20676" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="20980:21035" ph="UPDATE `proc... " />
-            <marker date="1532697831471" expanded="true" signature="20980:21036" ph="UPDATE `proc... " />
-            <marker date="1532697831471" expanded="true" signature="21278:21352" ph="UPDATE `mark... " />
-            <marker date="1532697831471" expanded="true" signature="21577:21615" ph="UPDATE `mark... " />
-            <marker date="1532697831471" expanded="true" signature="21631:21665" ph="DELETE FROM " />
-            <marker date="1532697831471" expanded="true" signature="21681:21703" ph="DELETE FROM " />
-            <marker date="1532697831471" expanded="true" signature="21719:21751" ph="DELETE FROM " />
-            <marker date="1532697831471" expanded="true" signature="21767:21807" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="21767:21827" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="21988:22048" ph="UPDATE `proc... " />
-            <marker date="1532697831471" expanded="true" signature="23183:23247" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="23630:23674" ph="SELECT count... products" />
-            <marker date="1532697831471" expanded="true" signature="23822:23857" ph="SELECT `offs... market_sites" />
-            <marker date="1532697831471" expanded="true" signature="24202:24280" ph="UPDATE `proc... " />
-            <marker date="1532697831471" expanded="true" signature="24318:24378" ph="UPDATE `proc... " />
-            <marker date="1532697831471" expanded="true" signature="24545:24590" ph="SELECT * FRO... process_status" />
-            <marker date="1532697831471" expanded="true" signature="25005:25092" ph="SELECT count... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="25316:25360" ph="SELECT count... products" />
-            <marker date="1532697831471" expanded="true" signature="25524:25613" ph="SELECT `offs... market_sites" />
+            <marker date="1534225133488" expanded="true" signature="6050:6074" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6089" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6106" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6108" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6131" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6133" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6143" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6144" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6181" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6360:6412" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6360:6413" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6360:6437" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6360:6439" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6360:6455" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6360:6998" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6586:6709" ph="INSERT INTO `sub_categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6586:6710" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6586:6727" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6586:6728" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6837:6888" ph="UPDATE `cate... " />
+            <marker date="1534225133488" expanded="true" signature="6837:6889" ph="UPDATE `cate... " />
+            <marker date="1534225133488" expanded="true" signature="7122:7225" ph="SELECT * FRO... third_level_categories" />
+            <marker date="1534225133488" expanded="true" signature="7356:7487" ph="INSERT INTO `third_level_categories`... " />
+            <marker date="1534225133488" expanded="true" signature="7683:7748" ph="SELECT * FRO... categories" />
+            <marker date="1534225133488" expanded="true" signature="8095:8160" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="8095:8161" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="8095:8162" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="8095:8169" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="8095:8170" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="8396:8425" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="8396:8434" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="8396:8449" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="8396:8450" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="8741:8867" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="8741:8880" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="8741:8884" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="8741:8897" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9478:9578" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9478:9602" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9478:9611" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9478:9629" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9478:9667" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9835:9921" ph="SELECT * FRO... product_sold_links" />
+            <marker date="1534225133488" expanded="true" signature="9835:9928" ph="SELECT DISTI... product_sold_links" />
+            <marker date="1534225133488" expanded="true" signature="9835:9931" ph="SELECT DISTI... product_sold_links" />
+            <marker date="1534225133488" expanded="true" signature="10157:10215" ph="UPDATE `prod... " />
+            <marker date="1534225133488" expanded="true" signature="10467:10517" ph="UPDATE `prod... " />
+            <marker date="1534225133488" expanded="true" signature="10467:10531" ph="UPDATE `prod... " />
+            <marker date="1534225133488" expanded="true" signature="10812:10921" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11009" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11054" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11065" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11088" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11099" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11101" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11115" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11131" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="11346:11411" ph="SELECT * FRO... categories" />
+            <marker date="1534225133488" expanded="true" signature="11346:11424" ph="SELECT * FRO... categories" />
+            <marker date="1534225133488" expanded="true" signature="11346:11481" ph="SELECT * FRO... categories" />
+            <marker date="1534225133488" expanded="true" signature="11775:11832" ph="SELECT * FRO...  WHERE " />
+            <marker date="1534225133488" expanded="true" signature="12090:12132" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="12090:12138" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="12090:12139" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="12090:12151" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="12863:13229" ph="INSERT INTO `market_product_match`... " />
+            <marker date="1534225133488" expanded="true" signature="13340:13391" ph="UPDATE `prod... " />
+            <marker date="1534225133488" expanded="true" signature="13712:13777" ph="SELECT * FRO... categories" />
+            <marker date="1534225133488" expanded="true" signature="14052:14121" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="17447:18200" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="17478:17791" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="17822:18107" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="17822:18167" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="18320:19218" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="18351:18725" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="18756:18945" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="18756:19185" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="20060:20062" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="20060:20904" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="20091:20454" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="20485:20811" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="20485:20871" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="21444:22021" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="22325:22380" ph="UPDATE `proc... " />
+            <marker date="1534225133488" expanded="true" signature="22325:22381" ph="UPDATE `proc... " />
+            <marker date="1534225133488" expanded="true" signature="22623:22697" ph="UPDATE `mark... " />
+            <marker date="1534225133488" expanded="true" signature="22922:22960" ph="UPDATE `mark... " />
+            <marker date="1534225133488" expanded="true" signature="22976:23010" ph="DELETE FROM " />
+            <marker date="1534225133488" expanded="true" signature="23026:23048" ph="DELETE FROM " />
+            <marker date="1534225133488" expanded="true" signature="23064:23096" ph="DELETE FROM " />
+            <marker date="1534225133488" expanded="true" signature="23112:23152" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="23112:23172" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="23333:23393" ph="UPDATE `proc... " />
+            <marker date="1534225133488" expanded="true" signature="24543:24607" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="24990:25034" ph="SELECT count... products" />
+            <marker date="1534225133488" expanded="true" signature="25182:25217" ph="SELECT `offs... market_sites" />
+            <marker date="1534225133488" expanded="true" signature="25562:25640" ph="UPDATE `proc... " />
+            <marker date="1534225133488" expanded="true" signature="25678:25738" ph="UPDATE `proc... " />
+            <marker date="1534225133488" expanded="true" signature="25905:25950" ph="SELECT * FRO... process_status" />
+            <marker date="1534225133488" expanded="true" signature="26365:26452" ph="SELECT count... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="26676:26720" ph="SELECT count... products" />
+            <marker date="1534225133488" expanded="true" signature="26884:26973" ph="SELECT `offs... market_sites" />
           </folding>
         </state>
       </provider>
@@ -690,9 +734,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="48" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="19" selection-end-column="48" />
-          <folding>
-            <marker date="1531781135055" expanded="true" signature="361:387" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -700,7 +741,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -725,109 +765,108 @@
           <caret line="98" column="74" lean-forward="false" selection-start-line="98" selection-start-column="74" selection-end-line="98" selection-end-column="74" />
           <folding>
             <element signature="e#6#40#0#PHP" expanded="true" />
-            <marker date="1532697831471" expanded="true" signature="5173:5197" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5212" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5229" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5231" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5254" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5256" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5266" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5267" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5304" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5483:5535" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5483:5536" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5483:5560" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5483:5562" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5483:5578" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5483:6121" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5709:5832" ph="INSERT INTO `sub_categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5709:5833" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5709:5850" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5709:5851" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5960:6011" ph="UPDATE `cate... " />
-            <marker date="1532697831471" expanded="true" signature="5960:6012" ph="UPDATE `cate... " />
-            <marker date="1532697831471" expanded="true" signature="6245:6348" ph="SELECT * FRO... third_level_categories" />
-            <marker date="1532697831471" expanded="true" signature="6479:6610" ph="INSERT INTO `third_level_categories`... " />
-            <marker date="1532697831471" expanded="true" signature="6806:6871" ph="SELECT * FRO... categories" />
-            <marker date="1532697831471" expanded="true" signature="7218:7283" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="7218:7284" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="7218:7285" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="7218:7292" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="7218:7293" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="7519:7548" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="7519:7557" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="7519:7572" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="7519:7573" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="7864:7990" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="7864:8003" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="7864:8007" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="7864:8020" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8601:8701" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8601:8725" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8601:8734" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8601:8752" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8601:8790" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8958:9044" ph="SELECT * FRO... product_sold_links" />
-            <marker date="1532697831471" expanded="true" signature="8958:9051" ph="SELECT DISTI... product_sold_links" />
-            <marker date="1532697831471" expanded="true" signature="8958:9054" ph="SELECT DISTI... product_sold_links" />
-            <marker date="1532697831471" expanded="true" signature="9280:9338" ph="UPDATE `prod... " />
-            <marker date="1532697831471" expanded="true" signature="9590:9640" ph="UPDATE `prod... " />
-            <marker date="1532697831471" expanded="true" signature="9590:9654" ph="UPDATE `prod... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10044" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10132" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10177" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10188" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10211" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10222" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10224" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10238" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10254" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="10469:10534" ph="SELECT * FRO... categories" />
-            <marker date="1532697831471" expanded="true" signature="10469:10547" ph="SELECT * FRO... categories" />
-            <marker date="1532697831471" expanded="true" signature="10469:10604" ph="SELECT * FRO... categories" />
-            <marker date="1532697831471" expanded="true" signature="10898:10955" ph="SELECT * FRO...  WHERE " />
-            <marker date="1532697831471" expanded="true" signature="11213:11255" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="11213:11261" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="11213:11262" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="11213:11274" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="11961:12258" ph="INSERT INTO `market_product_match`... " />
-            <marker date="1532697831471" expanded="true" signature="12369:12420" ph="UPDATE `prod... " />
-            <marker date="1532697831471" expanded="true" signature="12720:12785" ph="SELECT * FRO... categories" />
-            <marker date="1532697831471" expanded="true" signature="13060:13129" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="13817:13848" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="16102:16855" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="16133:16446" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="16477:16762" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="16477:16822" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="16975:17873" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="17006:17380" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="17411:17600" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="17411:17840" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="18715:18717" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="18715:19559" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="18746:19109" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="19140:19466" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="19140:19526" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="20099:20676" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="20980:21035" ph="UPDATE `proc... " />
-            <marker date="1532697831471" expanded="true" signature="20980:21036" ph="UPDATE `proc... " />
-            <marker date="1532697831471" expanded="true" signature="21278:21352" ph="UPDATE `mark... " />
-            <marker date="1532697831471" expanded="true" signature="21577:21615" ph="UPDATE `mark... " />
-            <marker date="1532697831471" expanded="true" signature="21631:21665" ph="DELETE FROM " />
-            <marker date="1532697831471" expanded="true" signature="21681:21703" ph="DELETE FROM " />
-            <marker date="1532697831471" expanded="true" signature="21719:21751" ph="DELETE FROM " />
-            <marker date="1532697831471" expanded="true" signature="21767:21807" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="21767:21827" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="21988:22048" ph="UPDATE `proc... " />
-            <marker date="1532697831471" expanded="true" signature="23183:23247" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="23630:23674" ph="SELECT count... products" />
-            <marker date="1532697831471" expanded="true" signature="23822:23857" ph="SELECT `offs... market_sites" />
-            <marker date="1532697831471" expanded="true" signature="24202:24280" ph="UPDATE `proc... " />
-            <marker date="1532697831471" expanded="true" signature="24318:24378" ph="UPDATE `proc... " />
-            <marker date="1532697831471" expanded="true" signature="24545:24590" ph="SELECT * FRO... process_status" />
-            <marker date="1532697831471" expanded="true" signature="25005:25092" ph="SELECT count... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="25316:25360" ph="SELECT count... products" />
-            <marker date="1532697831471" expanded="true" signature="25524:25613" ph="SELECT `offs... market_sites" />
+            <marker date="1534225133488" expanded="true" signature="6050:6074" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6089" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6106" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6108" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6131" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6133" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6143" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6144" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6181" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6360:6412" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6360:6413" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6360:6437" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6360:6439" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6360:6455" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6360:6998" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6586:6709" ph="INSERT INTO `sub_categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6586:6710" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6586:6727" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6586:6728" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6837:6888" ph="UPDATE `cate... " />
+            <marker date="1534225133488" expanded="true" signature="6837:6889" ph="UPDATE `cate... " />
+            <marker date="1534225133488" expanded="true" signature="7122:7225" ph="SELECT * FRO... third_level_categories" />
+            <marker date="1534225133488" expanded="true" signature="7356:7487" ph="INSERT INTO `third_level_categories`... " />
+            <marker date="1534225133488" expanded="true" signature="7683:7748" ph="SELECT * FRO... categories" />
+            <marker date="1534225133488" expanded="true" signature="8095:8160" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="8095:8161" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="8095:8162" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="8095:8169" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="8095:8170" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="8396:8425" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="8396:8434" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="8396:8449" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="8396:8450" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="8741:8867" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="8741:8880" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="8741:8884" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="8741:8897" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9478:9578" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9478:9602" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9478:9611" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9478:9629" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9478:9667" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9835:9921" ph="SELECT * FRO... product_sold_links" />
+            <marker date="1534225133488" expanded="true" signature="9835:9928" ph="SELECT DISTI... product_sold_links" />
+            <marker date="1534225133488" expanded="true" signature="9835:9931" ph="SELECT DISTI... product_sold_links" />
+            <marker date="1534225133488" expanded="true" signature="10157:10215" ph="UPDATE `prod... " />
+            <marker date="1534225133488" expanded="true" signature="10467:10517" ph="UPDATE `prod... " />
+            <marker date="1534225133488" expanded="true" signature="10467:10531" ph="UPDATE `prod... " />
+            <marker date="1534225133488" expanded="true" signature="10812:10921" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11009" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11054" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11065" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11088" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11099" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11101" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11115" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11131" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="11346:11411" ph="SELECT * FRO... categories" />
+            <marker date="1534225133488" expanded="true" signature="11346:11424" ph="SELECT * FRO... categories" />
+            <marker date="1534225133488" expanded="true" signature="11346:11481" ph="SELECT * FRO... categories" />
+            <marker date="1534225133488" expanded="true" signature="11775:11832" ph="SELECT * FRO...  WHERE " />
+            <marker date="1534225133488" expanded="true" signature="12090:12132" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="12090:12138" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="12090:12139" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="12090:12151" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="12863:13229" ph="INSERT INTO `market_product_match`... " />
+            <marker date="1534225133488" expanded="true" signature="13340:13391" ph="UPDATE `prod... " />
+            <marker date="1534225133488" expanded="true" signature="13712:13777" ph="SELECT * FRO... categories" />
+            <marker date="1534225133488" expanded="true" signature="14052:14121" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="17447:18200" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="17478:17791" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="17822:18107" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="17822:18167" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="18320:19218" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="18351:18725" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="18756:18945" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="18756:19185" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="20060:20062" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="20060:20904" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="20091:20454" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="20485:20811" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="20485:20871" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="21444:22021" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="22325:22380" ph="UPDATE `proc... " />
+            <marker date="1534225133488" expanded="true" signature="22325:22381" ph="UPDATE `proc... " />
+            <marker date="1534225133488" expanded="true" signature="22623:22697" ph="UPDATE `mark... " />
+            <marker date="1534225133488" expanded="true" signature="22922:22960" ph="UPDATE `mark... " />
+            <marker date="1534225133488" expanded="true" signature="22976:23010" ph="DELETE FROM " />
+            <marker date="1534225133488" expanded="true" signature="23026:23048" ph="DELETE FROM " />
+            <marker date="1534225133488" expanded="true" signature="23064:23096" ph="DELETE FROM " />
+            <marker date="1534225133488" expanded="true" signature="23112:23152" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="23112:23172" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="23333:23393" ph="UPDATE `proc... " />
+            <marker date="1534225133488" expanded="true" signature="24543:24607" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="24990:25034" ph="SELECT count... products" />
+            <marker date="1534225133488" expanded="true" signature="25182:25217" ph="SELECT `offs... market_sites" />
+            <marker date="1534225133488" expanded="true" signature="25562:25640" ph="UPDATE `proc... " />
+            <marker date="1534225133488" expanded="true" signature="25678:25738" ph="UPDATE `proc... " />
+            <marker date="1534225133488" expanded="true" signature="25905:25950" ph="SELECT * FRO... process_status" />
+            <marker date="1534225133488" expanded="true" signature="26365:26452" ph="SELECT count... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="26676:26720" ph="SELECT count... products" />
+            <marker date="1534225133488" expanded="true" signature="26884:26973" ph="SELECT `offs... market_sites" />
           </folding>
         </state>
       </provider>
@@ -844,9 +883,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1531781135055" expanded="true" signature="361:387" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -863,109 +899,108 @@
           <caret line="55" column="127" lean-forward="false" selection-start-line="55" selection-start-column="127" selection-end-line="55" selection-end-column="127" />
           <folding>
             <element signature="e#6#40#0#PHP" expanded="true" />
-            <marker date="1532697831471" expanded="true" signature="5173:5197" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5212" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5229" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5231" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5254" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5256" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5266" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5267" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5304" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5483:5535" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5483:5536" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5483:5560" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5483:5562" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5483:5578" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5483:6121" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5709:5832" ph="INSERT INTO `sub_categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5709:5833" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5709:5850" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5709:5851" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5960:6011" ph="UPDATE `cate... " />
-            <marker date="1532697831471" expanded="true" signature="5960:6012" ph="UPDATE `cate... " />
-            <marker date="1532697831471" expanded="true" signature="6245:6348" ph="SELECT * FRO... third_level_categories" />
-            <marker date="1532697831471" expanded="true" signature="6479:6610" ph="INSERT INTO `third_level_categories`... " />
-            <marker date="1532697831471" expanded="true" signature="6806:6871" ph="SELECT * FRO... categories" />
-            <marker date="1532697831471" expanded="true" signature="7218:7283" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="7218:7284" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="7218:7285" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="7218:7292" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="7218:7293" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="7519:7548" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="7519:7557" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="7519:7572" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="7519:7573" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="7864:7990" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="7864:8003" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="7864:8007" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="7864:8020" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8601:8701" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8601:8725" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8601:8734" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8601:8752" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8601:8790" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8958:9044" ph="SELECT * FRO... product_sold_links" />
-            <marker date="1532697831471" expanded="true" signature="8958:9051" ph="SELECT DISTI... product_sold_links" />
-            <marker date="1532697831471" expanded="true" signature="8958:9054" ph="SELECT DISTI... product_sold_links" />
-            <marker date="1532697831471" expanded="true" signature="9280:9338" ph="UPDATE `prod... " />
-            <marker date="1532697831471" expanded="true" signature="9590:9640" ph="UPDATE `prod... " />
-            <marker date="1532697831471" expanded="true" signature="9590:9654" ph="UPDATE `prod... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10044" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10132" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10177" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10188" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10211" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10222" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10224" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10238" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10254" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="10469:10534" ph="SELECT * FRO... categories" />
-            <marker date="1532697831471" expanded="true" signature="10469:10547" ph="SELECT * FRO... categories" />
-            <marker date="1532697831471" expanded="true" signature="10469:10604" ph="SELECT * FRO... categories" />
-            <marker date="1532697831471" expanded="true" signature="10898:10955" ph="SELECT * FRO...  WHERE " />
-            <marker date="1532697831471" expanded="true" signature="11213:11255" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="11213:11261" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="11213:11262" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="11213:11274" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="11961:12258" ph="INSERT INTO `market_product_match`... " />
-            <marker date="1532697831471" expanded="true" signature="12369:12420" ph="UPDATE `prod... " />
-            <marker date="1532697831471" expanded="true" signature="12720:12785" ph="SELECT * FRO... categories" />
-            <marker date="1532697831471" expanded="true" signature="13060:13129" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="13817:13848" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="16102:16855" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="16133:16446" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="16477:16762" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="16477:16822" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="16975:17873" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="17006:17380" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="17411:17600" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="17411:17840" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="18715:18717" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="18715:19559" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="18746:19109" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="19140:19466" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="19140:19526" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="20099:20676" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="20980:21035" ph="UPDATE `proc... " />
-            <marker date="1532697831471" expanded="true" signature="20980:21036" ph="UPDATE `proc... " />
-            <marker date="1532697831471" expanded="true" signature="21278:21352" ph="UPDATE `mark... " />
-            <marker date="1532697831471" expanded="true" signature="21577:21615" ph="UPDATE `mark... " />
-            <marker date="1532697831471" expanded="true" signature="21631:21665" ph="DELETE FROM " />
-            <marker date="1532697831471" expanded="true" signature="21681:21703" ph="DELETE FROM " />
-            <marker date="1532697831471" expanded="true" signature="21719:21751" ph="DELETE FROM " />
-            <marker date="1532697831471" expanded="true" signature="21767:21807" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="21767:21827" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="21988:22048" ph="UPDATE `proc... " />
-            <marker date="1532697831471" expanded="true" signature="23183:23247" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="23630:23674" ph="SELECT count... products" />
-            <marker date="1532697831471" expanded="true" signature="23822:23857" ph="SELECT `offs... market_sites" />
-            <marker date="1532697831471" expanded="true" signature="24202:24280" ph="UPDATE `proc... " />
-            <marker date="1532697831471" expanded="true" signature="24318:24378" ph="UPDATE `proc... " />
-            <marker date="1532697831471" expanded="true" signature="24545:24590" ph="SELECT * FRO... process_status" />
-            <marker date="1532697831471" expanded="true" signature="25005:25092" ph="SELECT count... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="25316:25360" ph="SELECT count... products" />
-            <marker date="1532697831471" expanded="true" signature="25524:25613" ph="SELECT `offs... market_sites" />
+            <marker date="1534225133488" expanded="true" signature="6050:6074" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6089" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6106" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6108" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6131" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6133" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6143" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6144" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6181" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6360:6412" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6360:6413" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6360:6437" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6360:6439" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6360:6455" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6360:6998" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6586:6709" ph="INSERT INTO `sub_categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6586:6710" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6586:6727" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6586:6728" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6837:6888" ph="UPDATE `cate... " />
+            <marker date="1534225133488" expanded="true" signature="6837:6889" ph="UPDATE `cate... " />
+            <marker date="1534225133488" expanded="true" signature="7122:7225" ph="SELECT * FRO... third_level_categories" />
+            <marker date="1534225133488" expanded="true" signature="7356:7487" ph="INSERT INTO `third_level_categories`... " />
+            <marker date="1534225133488" expanded="true" signature="7683:7748" ph="SELECT * FRO... categories" />
+            <marker date="1534225133488" expanded="true" signature="8095:8160" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="8095:8161" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="8095:8162" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="8095:8169" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="8095:8170" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="8396:8425" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="8396:8434" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="8396:8449" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="8396:8450" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="8741:8867" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="8741:8880" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="8741:8884" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="8741:8897" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9478:9578" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9478:9602" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9478:9611" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9478:9629" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9478:9667" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9835:9921" ph="SELECT * FRO... product_sold_links" />
+            <marker date="1534225133488" expanded="true" signature="9835:9928" ph="SELECT DISTI... product_sold_links" />
+            <marker date="1534225133488" expanded="true" signature="9835:9931" ph="SELECT DISTI... product_sold_links" />
+            <marker date="1534225133488" expanded="true" signature="10157:10215" ph="UPDATE `prod... " />
+            <marker date="1534225133488" expanded="true" signature="10467:10517" ph="UPDATE `prod... " />
+            <marker date="1534225133488" expanded="true" signature="10467:10531" ph="UPDATE `prod... " />
+            <marker date="1534225133488" expanded="true" signature="10812:10921" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11009" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11054" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11065" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11088" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11099" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11101" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11115" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11131" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="11346:11411" ph="SELECT * FRO... categories" />
+            <marker date="1534225133488" expanded="true" signature="11346:11424" ph="SELECT * FRO... categories" />
+            <marker date="1534225133488" expanded="true" signature="11346:11481" ph="SELECT * FRO... categories" />
+            <marker date="1534225133488" expanded="true" signature="11775:11832" ph="SELECT * FRO...  WHERE " />
+            <marker date="1534225133488" expanded="true" signature="12090:12132" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="12090:12138" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="12090:12139" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="12090:12151" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="12863:13229" ph="INSERT INTO `market_product_match`... " />
+            <marker date="1534225133488" expanded="true" signature="13340:13391" ph="UPDATE `prod... " />
+            <marker date="1534225133488" expanded="true" signature="13712:13777" ph="SELECT * FRO... categories" />
+            <marker date="1534225133488" expanded="true" signature="14052:14121" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="17447:18200" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="17478:17791" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="17822:18107" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="17822:18167" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="18320:19218" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="18351:18725" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="18756:18945" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="18756:19185" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="20060:20062" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="20060:20904" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="20091:20454" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="20485:20811" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="20485:20871" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="21444:22021" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="22325:22380" ph="UPDATE `proc... " />
+            <marker date="1534225133488" expanded="true" signature="22325:22381" ph="UPDATE `proc... " />
+            <marker date="1534225133488" expanded="true" signature="22623:22697" ph="UPDATE `mark... " />
+            <marker date="1534225133488" expanded="true" signature="22922:22960" ph="UPDATE `mark... " />
+            <marker date="1534225133488" expanded="true" signature="22976:23010" ph="DELETE FROM " />
+            <marker date="1534225133488" expanded="true" signature="23026:23048" ph="DELETE FROM " />
+            <marker date="1534225133488" expanded="true" signature="23064:23096" ph="DELETE FROM " />
+            <marker date="1534225133488" expanded="true" signature="23112:23152" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="23112:23172" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="23333:23393" ph="UPDATE `proc... " />
+            <marker date="1534225133488" expanded="true" signature="24543:24607" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="24990:25034" ph="SELECT count... products" />
+            <marker date="1534225133488" expanded="true" signature="25182:25217" ph="SELECT `offs... market_sites" />
+            <marker date="1534225133488" expanded="true" signature="25562:25640" ph="UPDATE `proc... " />
+            <marker date="1534225133488" expanded="true" signature="25678:25738" ph="UPDATE `proc... " />
+            <marker date="1534225133488" expanded="true" signature="25905:25950" ph="SELECT * FRO... process_status" />
+            <marker date="1534225133488" expanded="true" signature="26365:26452" ph="SELECT count... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="26676:26720" ph="SELECT count... products" />
+            <marker date="1534225133488" expanded="true" signature="26884:26973" ph="SELECT `offs... market_sites" />
           </folding>
         </state>
       </provider>
@@ -982,9 +1017,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding>
-            <marker date="1531781135055" expanded="true" signature="361:387" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -994,109 +1026,108 @@
           <caret line="43" column="69" lean-forward="false" selection-start-line="43" selection-start-column="69" selection-end-line="43" selection-end-column="69" />
           <folding>
             <element signature="e#6#40#0#PHP" expanded="true" />
-            <marker date="1532697831471" expanded="true" signature="5173:5197" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5212" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5229" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5231" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5254" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5256" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5266" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5267" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5304" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5483:5535" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5483:5536" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5483:5560" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5483:5562" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5483:5578" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5483:6121" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5709:5832" ph="INSERT INTO `sub_categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5709:5833" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5709:5850" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5709:5851" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5960:6011" ph="UPDATE `cate... " />
-            <marker date="1532697831471" expanded="true" signature="5960:6012" ph="UPDATE `cate... " />
-            <marker date="1532697831471" expanded="true" signature="6245:6348" ph="SELECT * FRO... third_level_categories" />
-            <marker date="1532697831471" expanded="true" signature="6479:6610" ph="INSERT INTO `third_level_categories`... " />
-            <marker date="1532697831471" expanded="true" signature="6806:6871" ph="SELECT * FRO... categories" />
-            <marker date="1532697831471" expanded="true" signature="7218:7283" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="7218:7284" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="7218:7285" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="7218:7292" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="7218:7293" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="7519:7548" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="7519:7557" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="7519:7572" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="7519:7573" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="7864:7990" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="7864:8003" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="7864:8007" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="7864:8020" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8601:8701" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8601:8725" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8601:8734" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8601:8752" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8601:8790" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8958:9044" ph="SELECT * FRO... product_sold_links" />
-            <marker date="1532697831471" expanded="true" signature="8958:9051" ph="SELECT DISTI... product_sold_links" />
-            <marker date="1532697831471" expanded="true" signature="8958:9054" ph="SELECT DISTI... product_sold_links" />
-            <marker date="1532697831471" expanded="true" signature="9280:9338" ph="UPDATE `prod... " />
-            <marker date="1532697831471" expanded="true" signature="9590:9640" ph="UPDATE `prod... " />
-            <marker date="1532697831471" expanded="true" signature="9590:9654" ph="UPDATE `prod... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10044" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10132" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10177" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10188" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10211" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10222" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10224" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10238" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10254" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="10469:10534" ph="SELECT * FRO... categories" />
-            <marker date="1532697831471" expanded="true" signature="10469:10547" ph="SELECT * FRO... categories" />
-            <marker date="1532697831471" expanded="true" signature="10469:10604" ph="SELECT * FRO... categories" />
-            <marker date="1532697831471" expanded="true" signature="10898:10955" ph="SELECT * FRO...  WHERE " />
-            <marker date="1532697831471" expanded="true" signature="11213:11255" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="11213:11261" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="11213:11262" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="11213:11274" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="11961:12258" ph="INSERT INTO `market_product_match`... " />
-            <marker date="1532697831471" expanded="true" signature="12369:12420" ph="UPDATE `prod... " />
-            <marker date="1532697831471" expanded="true" signature="12720:12785" ph="SELECT * FRO... categories" />
-            <marker date="1532697831471" expanded="true" signature="13060:13129" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="13817:13848" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="16102:16855" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="16133:16446" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="16477:16762" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="16477:16822" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="16975:17873" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="17006:17380" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="17411:17600" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="17411:17840" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="18715:18717" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="18715:19559" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="18746:19109" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="19140:19466" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="19140:19526" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="20099:20676" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="20980:21035" ph="UPDATE `proc... " />
-            <marker date="1532697831471" expanded="true" signature="20980:21036" ph="UPDATE `proc... " />
-            <marker date="1532697831471" expanded="true" signature="21278:21352" ph="UPDATE `mark... " />
-            <marker date="1532697831471" expanded="true" signature="21577:21615" ph="UPDATE `mark... " />
-            <marker date="1532697831471" expanded="true" signature="21631:21665" ph="DELETE FROM " />
-            <marker date="1532697831471" expanded="true" signature="21681:21703" ph="DELETE FROM " />
-            <marker date="1532697831471" expanded="true" signature="21719:21751" ph="DELETE FROM " />
-            <marker date="1532697831471" expanded="true" signature="21767:21807" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="21767:21827" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="21988:22048" ph="UPDATE `proc... " />
-            <marker date="1532697831471" expanded="true" signature="23183:23247" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="23630:23674" ph="SELECT count... products" />
-            <marker date="1532697831471" expanded="true" signature="23822:23857" ph="SELECT `offs... market_sites" />
-            <marker date="1532697831471" expanded="true" signature="24202:24280" ph="UPDATE `proc... " />
-            <marker date="1532697831471" expanded="true" signature="24318:24378" ph="UPDATE `proc... " />
-            <marker date="1532697831471" expanded="true" signature="24545:24590" ph="SELECT * FRO... process_status" />
-            <marker date="1532697831471" expanded="true" signature="25005:25092" ph="SELECT count... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="25316:25360" ph="SELECT count... products" />
-            <marker date="1532697831471" expanded="true" signature="25524:25613" ph="SELECT `offs... market_sites" />
+            <marker date="1534225133488" expanded="true" signature="6050:6074" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6089" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6106" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6108" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6131" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6133" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6143" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6144" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6181" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6360:6412" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6360:6413" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6360:6437" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6360:6439" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6360:6455" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6360:6998" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6586:6709" ph="INSERT INTO `sub_categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6586:6710" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6586:6727" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6586:6728" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6837:6888" ph="UPDATE `cate... " />
+            <marker date="1534225133488" expanded="true" signature="6837:6889" ph="UPDATE `cate... " />
+            <marker date="1534225133488" expanded="true" signature="7122:7225" ph="SELECT * FRO... third_level_categories" />
+            <marker date="1534225133488" expanded="true" signature="7356:7487" ph="INSERT INTO `third_level_categories`... " />
+            <marker date="1534225133488" expanded="true" signature="7683:7748" ph="SELECT * FRO... categories" />
+            <marker date="1534225133488" expanded="true" signature="8095:8160" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="8095:8161" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="8095:8162" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="8095:8169" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="8095:8170" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="8396:8425" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="8396:8434" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="8396:8449" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="8396:8450" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="8741:8867" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="8741:8880" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="8741:8884" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="8741:8897" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9478:9578" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9478:9602" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9478:9611" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9478:9629" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9478:9667" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9835:9921" ph="SELECT * FRO... product_sold_links" />
+            <marker date="1534225133488" expanded="true" signature="9835:9928" ph="SELECT DISTI... product_sold_links" />
+            <marker date="1534225133488" expanded="true" signature="9835:9931" ph="SELECT DISTI... product_sold_links" />
+            <marker date="1534225133488" expanded="true" signature="10157:10215" ph="UPDATE `prod... " />
+            <marker date="1534225133488" expanded="true" signature="10467:10517" ph="UPDATE `prod... " />
+            <marker date="1534225133488" expanded="true" signature="10467:10531" ph="UPDATE `prod... " />
+            <marker date="1534225133488" expanded="true" signature="10812:10921" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11009" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11054" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11065" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11088" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11099" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11101" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11115" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11131" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="11346:11411" ph="SELECT * FRO... categories" />
+            <marker date="1534225133488" expanded="true" signature="11346:11424" ph="SELECT * FRO... categories" />
+            <marker date="1534225133488" expanded="true" signature="11346:11481" ph="SELECT * FRO... categories" />
+            <marker date="1534225133488" expanded="true" signature="11775:11832" ph="SELECT * FRO...  WHERE " />
+            <marker date="1534225133488" expanded="true" signature="12090:12132" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="12090:12138" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="12090:12139" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="12090:12151" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="12863:13229" ph="INSERT INTO `market_product_match`... " />
+            <marker date="1534225133488" expanded="true" signature="13340:13391" ph="UPDATE `prod... " />
+            <marker date="1534225133488" expanded="true" signature="13712:13777" ph="SELECT * FRO... categories" />
+            <marker date="1534225133488" expanded="true" signature="14052:14121" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="17447:18200" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="17478:17791" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="17822:18107" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="17822:18167" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="18320:19218" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="18351:18725" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="18756:18945" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="18756:19185" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="20060:20062" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="20060:20904" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="20091:20454" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="20485:20811" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="20485:20871" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="21444:22021" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="22325:22380" ph="UPDATE `proc... " />
+            <marker date="1534225133488" expanded="true" signature="22325:22381" ph="UPDATE `proc... " />
+            <marker date="1534225133488" expanded="true" signature="22623:22697" ph="UPDATE `mark... " />
+            <marker date="1534225133488" expanded="true" signature="22922:22960" ph="UPDATE `mark... " />
+            <marker date="1534225133488" expanded="true" signature="22976:23010" ph="DELETE FROM " />
+            <marker date="1534225133488" expanded="true" signature="23026:23048" ph="DELETE FROM " />
+            <marker date="1534225133488" expanded="true" signature="23064:23096" ph="DELETE FROM " />
+            <marker date="1534225133488" expanded="true" signature="23112:23152" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="23112:23172" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="23333:23393" ph="UPDATE `proc... " />
+            <marker date="1534225133488" expanded="true" signature="24543:24607" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="24990:25034" ph="SELECT count... products" />
+            <marker date="1534225133488" expanded="true" signature="25182:25217" ph="SELECT `offs... market_sites" />
+            <marker date="1534225133488" expanded="true" signature="25562:25640" ph="UPDATE `proc... " />
+            <marker date="1534225133488" expanded="true" signature="25678:25738" ph="UPDATE `proc... " />
+            <marker date="1534225133488" expanded="true" signature="25905:25950" ph="SELECT * FRO... process_status" />
+            <marker date="1534225133488" expanded="true" signature="26365:26452" ph="SELECT count... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="26676:26720" ph="SELECT count... products" />
+            <marker date="1534225133488" expanded="true" signature="26884:26973" ph="SELECT `offs... market_sites" />
           </folding>
         </state>
       </provider>
@@ -1108,30 +1139,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/x.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/sears.php" />
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="19" column="48" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="19" selection-end-column="48" />
-          <folding>
-            <marker date="1531781135055" expanded="true" signature="361:387" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="36" lean-forward="false" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1181,15 +1193,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="30" column="14" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="30" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1200,11 +1203,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/amazon.php">
+    <entry file="file://$PROJECT_DIR$/sites/test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="35" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="-272">
+          <caret line="5" column="36" lean-forward="false" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/x.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ebay-test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="34" column="17" lean-forward="false" selection-start-line="27" selection-start-column="16" selection-end-line="34" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/send-output.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -1212,7 +1242,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
           <caret line="25" column="32" lean-forward="true" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1224,211 +1253,202 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/newegg.php">
+    <entry file="file://$PROJECT_DIR$/get-sold-listings.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="34" column="65" lean-forward="false" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
+        <state relative-caret-position="1037">
+          <caret line="61" column="59" lean-forward="true" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/target.php">
+    <entry file="file://$PROJECT_DIR$/reset.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="32" column="65" lean-forward="false" selection-start-line="32" selection-start-column="65" selection-end-line="32" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/tigerdirect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="35" column="70" lean-forward="false" selection-start-line="35" selection-start-column="70" selection-end-line="35" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/walmart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="34" column="66" lean-forward="false" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/send-output.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="40" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/google.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="38" column="55" lean-forward="false" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ebay-test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="17" lean-forward="false" selection-start-line="27" selection-start-column="16" selection-end-line="34" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="38" />
+        <state relative-caret-position="17">
+          <caret line="1" column="43" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/get-product-info.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/get-sold-listings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/homedepot.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="36" />
+        <state relative-caret-position="448">
+          <caret line="33" column="43" lean-forward="true" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Model/Scraper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-172">
-          <caret line="111" column="26" lean-forward="false" selection-start-line="111" selection-start-column="20" selection-end-line="111" selection-end-column="26" />
+        <state relative-caret-position="204">
+          <caret line="96" column="30" lean-forward="false" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="30" />
           <folding>
             <element signature="e#6#40#0#PHP" expanded="true" />
-            <marker date="1532697831471" expanded="true" signature="5173:5197" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5212" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5229" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5231" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5254" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5256" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5266" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5267" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5173:5304" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5483:5535" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5483:5536" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5483:5560" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5483:5562" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5483:5578" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5483:6121" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="5709:5832" ph="INSERT INTO `sub_categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5709:5833" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5709:5850" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5709:5851" ph="INSERT INTO `categories`... " />
-            <marker date="1532697831471" expanded="true" signature="5960:6011" ph="UPDATE `cate... " />
-            <marker date="1532697831471" expanded="true" signature="5960:6012" ph="UPDATE `cate... " />
-            <marker date="1532697831471" expanded="true" signature="6245:6348" ph="SELECT * FRO... third_level_categories" />
-            <marker date="1532697831471" expanded="true" signature="6479:6610" ph="INSERT INTO `third_level_categories`... " />
-            <marker date="1532697831471" expanded="true" signature="6806:6871" ph="SELECT * FRO... categories" />
-            <marker date="1532697831471" expanded="true" signature="7218:7283" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="7218:7284" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="7218:7285" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="7218:7292" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="7218:7293" ph="SELECT * FRO... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="7519:7548" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="7519:7557" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="7519:7572" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="7519:7573" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="7864:7990" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="7864:8003" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="7864:8007" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="7864:8020" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8601:8701" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8601:8725" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8601:8734" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8601:8752" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8601:8790" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="8958:9044" ph="SELECT * FRO... product_sold_links" />
-            <marker date="1532697831471" expanded="true" signature="8958:9051" ph="SELECT DISTI... product_sold_links" />
-            <marker date="1532697831471" expanded="true" signature="8958:9054" ph="SELECT DISTI... product_sold_links" />
-            <marker date="1532697831471" expanded="true" signature="9280:9338" ph="UPDATE `prod... " />
-            <marker date="1532697831471" expanded="true" signature="9590:9640" ph="UPDATE `prod... " />
-            <marker date="1532697831471" expanded="true" signature="9590:9654" ph="UPDATE `prod... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10044" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10132" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10177" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10188" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10211" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10222" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10224" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10238" ph="INSERT INTO `products`... " />
-            <marker date="1532697831471" expanded="true" signature="9935:10254" ph="INSERT INTO `product_sold_links`... " />
-            <marker date="1532697831471" expanded="true" signature="10469:10534" ph="SELECT * FRO... categories" />
-            <marker date="1532697831471" expanded="true" signature="10469:10547" ph="SELECT * FRO... categories" />
-            <marker date="1532697831471" expanded="true" signature="10469:10604" ph="SELECT * FRO... categories" />
-            <marker date="1532697831471" expanded="true" signature="10898:10955" ph="SELECT * FRO...  WHERE " />
-            <marker date="1532697831471" expanded="true" signature="11213:11255" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="11213:11261" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="11213:11262" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="11213:11274" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="11961:12258" ph="INSERT INTO `market_product_match`... " />
-            <marker date="1532697831471" expanded="true" signature="12369:12420" ph="UPDATE `prod... " />
-            <marker date="1532697831471" expanded="true" signature="12720:12785" ph="SELECT * FRO... categories" />
-            <marker date="1532697831471" expanded="true" signature="13060:13129" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="13817:13848" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="16102:16855" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="16133:16446" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="16477:16762" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="16477:16822" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="16975:17873" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="17006:17380" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="17411:17600" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="17411:17840" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="18715:18717" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="18715:19559" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="18746:19109" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="19140:19466" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="19140:19526" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="20099:20676" ph="..." />
-            <marker date="1532697831471" expanded="true" signature="20980:21035" ph="UPDATE `proc... " />
-            <marker date="1532697831471" expanded="true" signature="20980:21036" ph="UPDATE `proc... " />
-            <marker date="1532697831471" expanded="true" signature="21278:21352" ph="UPDATE `mark... " />
-            <marker date="1532697831471" expanded="true" signature="21577:21615" ph="UPDATE `mark... " />
-            <marker date="1532697831471" expanded="true" signature="21631:21665" ph="DELETE FROM " />
-            <marker date="1532697831471" expanded="true" signature="21681:21703" ph="DELETE FROM " />
-            <marker date="1532697831471" expanded="true" signature="21719:21751" ph="DELETE FROM " />
-            <marker date="1532697831471" expanded="true" signature="21767:21807" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="21767:21827" ph="UPDATE `sub_... " />
-            <marker date="1532697831471" expanded="true" signature="21988:22048" ph="UPDATE `proc... " />
-            <marker date="1532697831471" expanded="true" signature="23183:23247" ph="SELECT * FRO... products" />
-            <marker date="1532697831471" expanded="true" signature="23630:23674" ph="SELECT count... products" />
-            <marker date="1532697831471" expanded="true" signature="23822:23857" ph="SELECT `offs... market_sites" />
-            <marker date="1532697831471" expanded="true" signature="24202:24280" ph="UPDATE `proc... " />
-            <marker date="1532697831471" expanded="true" signature="24318:24378" ph="UPDATE `proc... " />
-            <marker date="1532697831471" expanded="true" signature="24545:24590" ph="SELECT * FRO... process_status" />
-            <marker date="1532697831471" expanded="true" signature="25005:25092" ph="SELECT count... sub_categories" />
-            <marker date="1532697831471" expanded="true" signature="25316:25360" ph="SELECT count... products" />
-            <marker date="1532697831471" expanded="true" signature="25524:25613" ph="SELECT `offs... market_sites" />
+            <marker date="1534225133488" expanded="true" signature="6050:6074" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6089" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6106" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6108" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6131" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6133" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6143" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6144" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6050:6181" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6360:6412" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6360:6413" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6360:6437" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6360:6439" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6360:6455" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6360:6998" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="6586:6709" ph="INSERT INTO `sub_categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6586:6710" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6586:6727" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6586:6728" ph="INSERT INTO `categories`... " />
+            <marker date="1534225133488" expanded="true" signature="6837:6888" ph="UPDATE `cate... " />
+            <marker date="1534225133488" expanded="true" signature="6837:6889" ph="UPDATE `cate... " />
+            <marker date="1534225133488" expanded="true" signature="7122:7225" ph="SELECT * FRO... third_level_categories" />
+            <marker date="1534225133488" expanded="true" signature="7356:7487" ph="INSERT INTO `third_level_categories`... " />
+            <marker date="1534225133488" expanded="true" signature="7683:7748" ph="SELECT * FRO... categories" />
+            <marker date="1534225133488" expanded="true" signature="8095:8160" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="8095:8161" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="8095:8162" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="8095:8169" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="8095:8170" ph="SELECT * FRO... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="8396:8425" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="8396:8434" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="8396:8449" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="8396:8450" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="8741:8867" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="8741:8880" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="8741:8884" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="8741:8897" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9478:9578" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9478:9602" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9478:9611" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9478:9629" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9478:9667" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="9835:9921" ph="SELECT * FRO... product_sold_links" />
+            <marker date="1534225133488" expanded="true" signature="9835:9928" ph="SELECT DISTI... product_sold_links" />
+            <marker date="1534225133488" expanded="true" signature="9835:9931" ph="SELECT DISTI... product_sold_links" />
+            <marker date="1534225133488" expanded="true" signature="10157:10215" ph="UPDATE `prod... " />
+            <marker date="1534225133488" expanded="true" signature="10467:10517" ph="UPDATE `prod... " />
+            <marker date="1534225133488" expanded="true" signature="10467:10531" ph="UPDATE `prod... " />
+            <marker date="1534225133488" expanded="true" signature="10812:10921" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11009" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11054" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11065" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11088" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11099" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11101" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11115" ph="INSERT INTO `products`... " />
+            <marker date="1534225133488" expanded="true" signature="10812:11131" ph="INSERT INTO `product_sold_links`... " />
+            <marker date="1534225133488" expanded="true" signature="11346:11411" ph="SELECT * FRO... categories" />
+            <marker date="1534225133488" expanded="true" signature="11346:11424" ph="SELECT * FRO... categories" />
+            <marker date="1534225133488" expanded="true" signature="11346:11481" ph="SELECT * FRO... categories" />
+            <marker date="1534225133488" expanded="true" signature="11775:11832" ph="SELECT * FRO...  WHERE " />
+            <marker date="1534225133488" expanded="true" signature="12090:12132" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="12090:12138" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="12090:12139" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="12090:12151" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="12863:13229" ph="INSERT INTO `market_product_match`... " />
+            <marker date="1534225133488" expanded="true" signature="13340:13391" ph="UPDATE `prod... " />
+            <marker date="1534225133488" expanded="true" signature="13712:13777" ph="SELECT * FRO... categories" />
+            <marker date="1534225133488" expanded="true" signature="14052:14121" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="17447:18200" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="17478:17791" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="17822:18107" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="17822:18167" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="18320:19218" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="18351:18725" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="18756:18945" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="18756:19185" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="20060:20062" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="20060:20904" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="20091:20454" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="20485:20811" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="20485:20871" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="21444:22021" ph="..." />
+            <marker date="1534225133488" expanded="true" signature="22325:22380" ph="UPDATE `proc... " />
+            <marker date="1534225133488" expanded="true" signature="22325:22381" ph="UPDATE `proc... " />
+            <marker date="1534225133488" expanded="true" signature="22623:22697" ph="UPDATE `mark... " />
+            <marker date="1534225133488" expanded="true" signature="22922:22960" ph="UPDATE `mark... " />
+            <marker date="1534225133488" expanded="true" signature="22976:23010" ph="DELETE FROM " />
+            <marker date="1534225133488" expanded="true" signature="23026:23048" ph="DELETE FROM " />
+            <marker date="1534225133488" expanded="true" signature="23064:23096" ph="DELETE FROM " />
+            <marker date="1534225133488" expanded="true" signature="23112:23152" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="23112:23172" ph="UPDATE `sub_... " />
+            <marker date="1534225133488" expanded="true" signature="23333:23393" ph="UPDATE `proc... " />
+            <marker date="1534225133488" expanded="true" signature="24543:24607" ph="SELECT * FRO... products" />
+            <marker date="1534225133488" expanded="true" signature="24990:25034" ph="SELECT count... products" />
+            <marker date="1534225133488" expanded="true" signature="25182:25217" ph="SELECT `offs... market_sites" />
+            <marker date="1534225133488" expanded="true" signature="25562:25640" ph="UPDATE `proc... " />
+            <marker date="1534225133488" expanded="true" signature="25678:25738" ph="UPDATE `proc... " />
+            <marker date="1534225133488" expanded="true" signature="25905:25950" ph="SELECT * FRO... process_status" />
+            <marker date="1534225133488" expanded="true" signature="26365:26452" ph="SELECT count... sub_categories" />
+            <marker date="1534225133488" expanded="true" signature="26676:26720" ph="SELECT count... products" />
+            <marker date="1534225133488" expanded="true" signature="26884:26973" ph="SELECT `offs... market_sites" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Model/Init.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+        <state relative-caret-position="374">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/amazon.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-674">
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/google.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="38" column="55" lean-forward="true" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/homedepot.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="59" column="2" lean-forward="true" selection-start-line="59" selection-start-column="2" selection-end-line="59" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/newegg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="29" column="58" lean-forward="true" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/target.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="28" column="38" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/tigerdirect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/walmart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
           <folding />
         </state>
       </provider>

@@ -55,12 +55,12 @@ class Scraper
 
         $port = '47647';
         $proxy = array(
-            '173.208.9.179',
-            '167.160.106.67',
-            '108.62.246.94',
-            '8.29.122.241',
-            '196.19.251.19',
-            '213.184.115.210',
+            '108.62.95.53',
+            '8.29.120.33',
+            '167.160.106.219',
+            '108.62.204.149',
+            '108.62.54.111',
+            '45.59.19.79',
         );
         $ip = $proxy[mt_rand(0,count($proxy) - 1)];
         $curl = curl_init();
@@ -138,6 +138,38 @@ class Scraper
             CURLOPT_HTTPHEADER => array(
                 "Cache-Control: no-cache",
                 "Postman-Token: 85969a77-227f-4da2-ab22-81feaa26c0c4"
+            ),
+        ));
+
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+
+        curl_close($curl);
+
+        if ($err) {
+            return array('html' => $err);
+        } else {
+            return array('html' => $response);
+        }
+    }
+
+
+    public function curlToHomeDepot($url, $proxy){
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 60,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "GET",
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTPHEADER => array(
+                "Cache-Control: no-cache",
+                "Postman-Token: 455fbcf7-3fb7-4e67-8ab0-8753a1c05976"
             ),
         ));
 
@@ -354,7 +386,7 @@ class Scraper
         return $content;
     }
 
-    public function recordProductMarketMatch($id, $prodId, $upc, $price, $ebayPrice, $directLink){
+    public function recordProductMarketMatch($id, $prodId, $upc, $price, $ebayPrice, $directLink, $prodIdentification = 0){
 
         $percentage = $ebayPrice - $price;
         $percentage = $percentage / $ebayPrice;
@@ -366,6 +398,7 @@ class Scraper
             $sql = 'INSERT INTO `market_product_match`
                SET `market_site_id` = '.$id.',
                `product_id` = '.$prodId.',
+               `product_identification` = "'.$prodIdentification.'",
                `upc` = "'.$upc.'",
                `market_price` = '.$price.',
                `ebay_price` = '.$ebayPrice.',
@@ -379,7 +412,7 @@ class Scraper
             $stmt->execute();
 
 
-            $this->recordToCsv($id, $prodId, $price, $directLink);
+            $this->recordToCsv($id, $prodId, $price, $directLink, $prodIdentification);
 
         }
         $pdo = null;
@@ -409,46 +442,49 @@ class Scraper
         $pdo = null;
         return $return;
     }
-    public function recordToCsv($marketId, $prodId, $price, $directLink, $isCsv = false, $csvData = array()){
+    public function recordToCsv($marketId, $prodId, $price, $directLink, $prodIdentification, $isCsv = false, $csvData = array()){
         $date = date('Y-m-d');
         $ebayItem = $this->getProductById($prodId);
-        $ebayPrice = $ebayItem['product_price'];
-        $ebayUrl = $ebayItem['product_url'];
-        $ebayUpc = $ebayItem['product_upc'];
-        $ebayProductName = $ebayItem['product_name'];
-        $message ='';
-        if($isCsv == true){
-            $csv = CSV_ROOT.'exports/google_sheets_'.$date.'.csv';
-            $data[] = implode('","', array(
-                    $csvData[0],
-                    $csvData[1],
-                    $csvData[2],
-                    $csvData[3],
-                    $ebayPrice,
-                    $ebayUrl
-                )
-            );
-        }else{
-            $csv = CSV_ROOT.'exports/product_list_'.$date.'.csv';
-            $marketData = $this->getMarketById($marketId);
-            $data[] = implode('","', array(
-                    $ebayUpc,
-                    $ebayPrice,
-                    html_entity_decode($ebayProductName),
-                    $ebayUrl,
-                    $marketData['name'],
-                    $price,
-                    $directLink
-                )
-            );
-        }
+        if($ebayItem){
+            $ebayPrice = $ebayItem['product_price'];
+            $ebayUrl = $ebayItem['product_url'];
+            $ebayUpc = $ebayItem['product_upc'];
+            $ebayProductName = $ebayItem['product_name'];
+            $message ='';
+            if($isCsv == true){
+                $csv = CSV_ROOT.'exports/google_sheets_'.$date.'.csv';
+                $data[] = implode('","', array(
+                        $csvData[0],
+                        $csvData[1],
+                        $csvData[2],
+                        $csvData[3],
+                        $ebayPrice,
+                        $ebayUrl
+                    )
+                );
+            }else{
+                $csv = CSV_ROOT.'exports/product_list_'.$date.'.csv';
+                $marketData = $this->getMarketById($marketId);
+                $data[] = implode('","', array(
+                        $ebayUpc,
+                        $prodIdentification,
+                        $ebayPrice,
+                        html_entity_decode($ebayProductName),
+                        $ebayUrl,
+                        $marketData['name'],
+                        $price,
+                        $directLink
+                    )
+                );
+            }
 
-        $file = fopen($csv,"a");
-        foreach ($data as $line){
-            fputcsv($file, explode('","',$line));
-        }
-        fclose($file);
+            $file = fopen($csv,"a");
+            foreach ($data as $line){
+                fputcsv($file, explode('","',$line));
+            }
+            fclose($file);
 
+        }
         return true;
     }
 
@@ -456,26 +492,29 @@ class Scraper
     public function recordToCsvGoogle($prodId, $price, $directLink, $store){
         $date = date('Y-m-d');
         $ebayItem = $this->getProductById($prodId);
-        $ebayPrice = $ebayItem['product_price'];
-        $ebayUrl = $ebayItem['product_url'];
-        $ebayUpc = $ebayItem['product_upc'];
-        $ebayProductName = $ebayItem['product_name'];
-        $csv = CSV_ROOT.'exports/google_shopping_'.$date.'.csv';
-        $data[] = implode('","', array(
-                $ebayUpc,
-                $price,
-                html_entity_decode($ebayProductName),
-                $store,
-                html_entity_decode($directLink),
-                $ebayPrice,
-                html_entity_decode($ebayUrl)
-            )
-        );
-        $file = fopen($csv,"a");
-        foreach ($data as $line){
-            fputcsv($file, explode('","',$line));
+        if($ebayItem){
+            $ebayPrice = $ebayItem['product_price'];
+            $ebayUrl = $ebayItem['product_url'];
+            $ebayUpc = $ebayItem['product_upc'];
+            $ebayProductName = $ebayItem['product_name'];
+            $csv = CSV_ROOT.'exports/google_shopping_'.$date.'.csv';
+            $data[] = implode('","', array(
+                    $ebayUpc,
+                    $price,
+                    html_entity_decode($ebayProductName),
+                    $store,
+                    html_entity_decode($directLink),
+                    $ebayPrice,
+                    html_entity_decode($ebayUrl)
+                )
+            );
+            $file = fopen($csv,"a");
+            foreach ($data as $line){
+                fputcsv($file, explode('","',$line));
+            }
+            fclose($file);
         }
-        fclose($file);
+
         return true;
     }
 
@@ -642,7 +681,7 @@ class Scraper
 
         $csv = CSV_ROOT.'exports/product_list_'.$date.'.csv';
         $file = fopen($csv,"w");
-        fputcsv($file, array('Upc','Ebay Price','Product Name','Ebay Product Link', 'Store','Store Price', 'Store Product Link'));
+        fputcsv($file, array('Upc', 'Product Id', 'Ebay Price','Product Name','Ebay Product Link', 'Store','Store Price', 'Store Product Link'));
         fclose($file);
 
         $csv = CSV_ROOT.'exports/google_sheets_'.$date.'.csv';

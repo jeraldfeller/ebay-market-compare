@@ -2,6 +2,7 @@
 require '/var/www/html/ebay-market-compare/Model/Init.php';
 require '/var/www/html/ebay-market-compare/Model/Scraper.php';
 require '/var/www/html/ebay-market-compare/simple_html_dom.php';
+
 $searchUrl = 'https://www.amazon.com/s/ref=nb_sb_noss?field-keywords=';
 $scraper = new Scraper();
 $isReady = $scraper->sitesExecutionReady();
@@ -23,16 +24,38 @@ if($isReady == 0){
             if($match){
                 $directUrl = $match->find('a', 0)->getAttribute('href');
                 $price1 = $match->find('.sx-price-whole', 0);
+                if(!$price1){
+                    $price1 = $match->find('.a-size-base', 0);
+                }
                 if($price1){
                     $price2 = $html->find('.sx-price-fractional', 0);
-                    $price = $price1->plaintext.'.'.$price2->plaintext;
+                    $price = $price1->plaintext;
                     $price = trim(str_replace($letters, '', $price));
-                    $scraper->recordProductMarketMatch($id, $prodId, $upc, $price, $ebayPrice, $directUrl);
+
+                    $htmlDataNew = $scraper->curlToAmazon($directUrl);
+                    if($htmlDataNew['html']) {
+                        $htmlNew = str_get_html($htmlDataNew['html']);
+                        $aTable = $htmlNew->find('#productDetails_detailBullets_sections1', 0);
+                        if($aTable){
+                            $aRow = $aTable->find('tr');
+                            for($a = 0; $a < count($aRow); $a++){
+                                $aThTitle = trim($aRow[$a]->find('th', 0)->plaintext);
+                                if($aThTitle == 'ASIN'){
+                                    $asin = trim($aRow[$a]->find('td', 0)->plaintext);
+                                }
+                            }
+                        }else{
+                            $asin = 0;
+                        }
+                    }else{
+                        $asin = 0;
+                    }
+                    $scraper->recordProductMarketMatch($id, $prodId, $upc, $price, $ebayPrice, $directUrl, $asin);
                 }
 
             }
         }else{
-            mail('jeraldfeller@gmail.com', 'Scrape Alert | amazon', $url);
+          //  mail('jeraldfeller@gmail.com', 'Scrape Alert | amazon', $url);
         }
 
     }

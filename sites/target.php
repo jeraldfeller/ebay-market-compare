@@ -5,6 +5,7 @@
 require '/var/www/html/ebay-market-compare/Model/Init.php';
 require '/var/www/html/ebay-market-compare/Model/Scraper.php';
 require '/var/www/html/ebay-market-compare/simple_html_dom.php';
+
 $searchUrl = 'https://redsky.target.com/v1/plp/search/?count=1&offset=0&keyword=';
 $scraper = new Scraper();
 $isReady = $scraper->sitesExecutionReady();
@@ -23,14 +24,13 @@ if($isReady == 0) {
         if ($htmlData['html']) {
             $data = json_decode($htmlData['html'], true);
             if (count($data['search_response']['items']['Item']) > 0) {
-                $price = $data['search_response']['items']['Item'][0]['list_price']['price'];
+                $price = $data['search_response']['items']['Item'][0]['esp']['list_price']['price'];
                 $directUrl = $mainUrl . $data['search_response']['items']['Item'][0]['url'];
-                echo $price . '<br>';
-                echo $directUrl;
-                $scraper->recordProductMarketMatch($id, $prodId, $upc, $price, $ebayPrice, $directUrl);
+                $productIdentification = $data['search_response']['items']['Item'][0]['tcin'];
+                $scraper->recordProductMarketMatch($id, $prodId, $upc, $price, $ebayPrice, $directUrl, $productIdentification);
             }
         }else{
-            mail('jeraldfeller@gmail.com', 'Scrape Alert | target', $url);
+         //   mail('jeraldfeller@gmail.com', 'Scrape Alert | target', $url);
         }
     }
 

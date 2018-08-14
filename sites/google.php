@@ -43,7 +43,7 @@ if($isReady == 0) {
             }
 
         }else{
-            mail('jeraldfeller@gmail.com', 'Scrape Alert | google', $url);
+         //   mail('jeraldfeller@gmail.com', 'Scrape Alert | google', $url);
         }
     }
 

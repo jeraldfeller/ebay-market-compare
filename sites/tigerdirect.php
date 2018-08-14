@@ -2,6 +2,7 @@
 require '/var/www/html/ebay-market-compare/Model/Init.php';
 require '/var/www/html/ebay-market-compare/Model/Scraper.php';
 require '/var/www/html/ebay-market-compare/simple_html_dom.php';
+
 $searchUrl = 'http://www.tigerdirect.com/applications/SearchTools/search.asp?keywords=';
 $scraper = new Scraper();
 $isReady = $scraper->sitesExecutionReady();
@@ -25,15 +26,27 @@ if($isReady == 0) {
                 $directUrl = $mainUrl . $match->find('.itemImage', 0)->getAttribute('href');
                 $price = $match->find('.salePrice', 0);
                 if ($price) {
+                    $reviewUrl = $match->find('.itemRating', 0);
+                    if($reviewUrl){
+                        $reviewUrl = $mainUrl.$reviewUrl->getAttribute('href');
+                        $productIdentification = parse_url($reviewUrl);
+                        parse_str($productIdentification['query'], $productIdentification);
+                        if(isset($productIdentification['amp;Sku'])){
+                            $productIdentification = $productIdentification['amp;Sku'];
+                        }else{
+                            $productIdentification = 0;
+                        }
+                    }else{
+                        $productIdentification = 0;
+                    }
                     $price = trim(str_replace($letters, '', $price->plaintext));
-                    echo $directUrl . '<br>';
-                    echo $price;
-                    $scraper->recordProductMarketMatch($id, $prodId, $upc, $price, $ebayPrice, $directUrl);
+
+                    $scraper->recordProductMarketMatch($id, $prodId, $upc, $price, $ebayPrice, $directUrl, $productIdentification);
                 }
 
             }
         }else{
-            mail('jeraldfeller@gmail.com', 'Scrape Alert | tigerdirect', $url);
+          //  mail('jeraldfeller@gmail.com', 'Scrape Alert | tigerdirect', $url);
         }
     }
 

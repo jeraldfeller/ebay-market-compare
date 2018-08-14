@@ -2,6 +2,7 @@
 require '/var/www/html/ebay-market-compare/Model/Init.php';
 require '/var/www/html/ebay-market-compare/Model/Scraper.php';
 require '/var/www/html/ebay-market-compare/simple_html_dom.php';
+
 $searchUrl = 'https://www.walmart.com/search/?query=';
 $scraper = new Scraper();
 $isReady = $scraper->sitesExecutionReady();
@@ -26,13 +27,15 @@ if($isReady == 0) {
                 $directUrl = $mainUrl . $match->find('.product-title-link', 0)->getAttribute('href');
                 $price = $html->find('.price-group', 0);
                 if ($price) {
+                    $productIdentification = explode('/', $directUrl);
+                    $productIdentification = $productIdentification[count($productIdentification)-1];
                     $price = trim(str_replace($letters, '', $price->plaintext));
-                    $scraper->recordProductMarketMatch($id, $prodId, $upc, $price, $ebayPrice, $directUrl);
+                    $scraper->recordProductMarketMatch($id, $prodId, $upc, $price, $ebayPrice, $directUrl, $productIdentification);
                 }
 
             }
         }else{
-            mail('jeraldfeller@gmail.com', 'Scrape Alert | walmart', $url);
+          //  mail('jeraldfeller@gmail.com', 'Scrape Alert | walmart', $url);
         }
     }
 
