@@ -30,28 +30,12 @@ if($isReady == 0) {
                 $price = $match->find('.checkbox-btn__input', 0);
                 if ($price) {
                     $price = trim(str_replace($letters, '', $price->getAttribute('data-price')));
-                    $scraper->recordProductMarketMatch($id, $prodId, $upc, $price, $ebayPrice, $directUrl, $productIdentification);
+                    if($price != ''){
+                        $scraper->recordProductMarketMatch($id, $prodId, $upc, $price, $ebayPrice, $directUrl, $productIdentification);
+                    }
                 }
 
             }
-            /*else{
-                echo $url .'<br>';
-                $productIdentification = $html->find('#product_internet_number', 0);
-                if($productIdentification){
-                    $productIdentification = $productIdentification->plaintext;
-                }else{
-                    $productIdentification = 0;
-                }
-
-                $price1 = $html->find('.price__dollars', 0);
-                if($price1){
-                    $price2 = $html->find('.price__cents', 0);
-                    $price = $price1->plaintext.'.'.$price2->plaintext;
-                    $directUrl = $url;
-                    $scraper->recordProductMarketMatch($id, $prodId, $upc, $price, $ebayPrice, $directUrl, $productIdentification);
-                }
-
-            }*/
         }else{
             //   mail('jeraldfeller@gmail.com', 'Scrape Alert | homedepot', $url);
         }

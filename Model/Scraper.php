@@ -91,7 +91,7 @@ class Scraper
         if ($err) {
             return array('html' => $err);
         } else {
-            return array('html' => $response);
+            return array('html' => $response, 'ip' => $ip);
         }
     }
     public function curlToEbay($url, $proxy){
@@ -649,6 +649,23 @@ class Scraper
         }
 
         return $return;
+    }
+
+    public function sendNotification($ip, $url, $html){
+
+        $message = $ip . "\n";
+        $message .= $url . "\n";
+        $message .= $html;
+
+        $email = new PHPMailer();
+        $email->From      = NO_REPLY_EMAIL;
+        $email->FromName      = NO_REPLY_EMAIL;
+        $email->Subject   = 'Amazon Report';
+        $email->Body      = $message;
+        $email->IsHTML(true);
+        $email->AddAddress( 'jeraldfeller@gmail.com' );
+        $email->Send();
+        return true;
     }
 
     public function updateMarketOffset($id, $limit){

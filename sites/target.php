@@ -24,7 +24,11 @@ if($isReady == 0) {
         if ($htmlData['html']) {
             $data = json_decode($htmlData['html'], true);
             if (count($data['search_response']['items']['Item']) > 0) {
-                $price = $data['search_response']['items']['Item'][0]['esp']['list_price']['price'];
+                if(isset($data['search_response']['items']['Item'][0]['list_price'])){
+                    $price = $data['search_response']['items']['Item'][0]['list_price']['price'];
+                }else{
+                    $price = $data['search_response']['items']['Item'][0]['offer_price']['price'];
+                }
                 $directUrl = $mainUrl . $data['search_response']['items']['Item'][0]['url'];
                 $productIdentification = $data['search_response']['items']['Item'][0]['tcin'];
                 $scraper->recordProductMarketMatch($id, $prodId, $upc, $price, $ebayPrice, $directUrl, $productIdentification);

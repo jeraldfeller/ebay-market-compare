@@ -1,3 +1,4 @@
 /vendor/
+/exports/
 market_sites.sql
 eby_db.sql

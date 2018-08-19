@@ -40,8 +40,9 @@ if($isReady == 0) {
                         $productIdentification = 0;
                     }
                     $price = trim(str_replace($letters, '', $price->plaintext));
-
-                    $scraper->recordProductMarketMatch($id, $prodId, $upc, $price, $ebayPrice, $directUrl, $productIdentification);
+                    if($price != ''){
+                        $scraper->recordProductMarketMatch($id, $prodId, $upc, $price, $ebayPrice, $directUrl, $productIdentification);
+                    }
                 }
 
             }
