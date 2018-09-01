@@ -13,7 +13,9 @@ if($isReady == 0) {
 
     $offset = $marketData['offset'];
     $upcList = $scraper->getProducts($offset, MARKET_LIMIT_COUNT);
-
+    if (count($upcList) > 0) {
+        $scraper->updateMarketOffset($id, count($upcList));
+    }
     foreach ($upcList as $row) {
         $upc = $row['product_upc'];;
         $prodId = $row['id'];
@@ -44,7 +46,5 @@ if($isReady == 0) {
         }
     }
 
-    if (count($upcList) > 0) {
-        $scraper->updateMarketOffset($id, count($upcList));
-    }
+
 }

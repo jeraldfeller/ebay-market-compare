@@ -77,9 +77,11 @@ class Scraper
             CURLOPT_PROXY => $ip,
             CURLOPT_PROXYPORT => '47647',
             CURLOPT_PROXYUSERPWD => 'ebymarket:dfab7c358',
+            CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
             CURLOPT_HTTPHEADER => array(
                 "Cache-Control: no-cache",
-                "Postman-Token: 85969a77-227f-4da2-ab22-81feaa26c0c4"
+                "Postman-Token: 85969a77-227f-4da2-ab22-81feaa26c0c4",
+
             ),
         ));
 
@@ -469,7 +471,7 @@ class Scraper
                         $ebayUpc,
                         $prodIdentification,
                         $ebayPrice,
-                        html_entity_decode($ebayProductName),
+                        str_replace('"', "'", html_entity_decode($ebayProductName)),
                         $ebayUrl,
                         $marketData['name'],
                         $price,
