@@ -34,7 +34,7 @@ if($isReady == 0) {
                 $percentage = $percentage / $ebayPrice;
                 $percentage = $percentage * 100;
                 if ($percentage >= PERCENTAGE_TARGET) {
-                    $scraper->recordToCsv(false, $prodId, $price, '', true, $data);
+                    $scraper->recordToCsvFromExcel($upc, $price, $title, $store, $ebayPrice, $directLink);
                 }
             }
 

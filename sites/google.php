@@ -2,10 +2,13 @@
 require '/var/www/html/ebay-market-compare/Model/Init.php';
 require '/var/www/html/ebay-market-compare/Model/Scraper.php';
 require '/var/www/html/ebay-market-compare/simple_html_dom.php';
+
 $searchUrl = 'https://www.google.com/search?newwindow=1&hl=en&tbm=shop&ei=HLRSW8ezM6PD0PEP45-1wAI&btnG=Search&q=';
 $scraper = new Scraper();
 $isReady = $scraper->sitesExecutionReady();
+$isReady = 0;
 if($isReady == 0) {
+
     $marketData = $scraper->getMarketData('google-shopping');
     $mainUrl = $marketData['url'];
     $id = $marketData['id'];
@@ -21,6 +24,7 @@ if($isReady == 0) {
         $prodId = $row['id'];
         $ebayPrice = $row['product_price'];
         $url = $searchUrl . $upc;
+        $url = 'https://www.google.com/search?newwindow=1&hl=en&tbm=shop&ei=HLRSW8ezM6PD0PEP45-1wAI&btnG=Search&q=Epson%20L360%20All-in-One%20Ink%20Tank%20Printer';
         $htmlData = $scraper->curlToGoogle($url);
         if ($htmlData['html']) {
             $html = str_get_html($htmlData['html']);
@@ -32,7 +36,7 @@ if($isReady == 0) {
                         $prodName = $a->plaintext;
                         $directLink = $a->getAttribute('href');
                         $priceStore = $g[$x]->find('.A8OWCb', 0);
-                        $price = $priceStore->find('b', 0)->plaintext;
+                        $price = str_replace($letters, '', $priceStore->find('b', 0)->plaintext);
                         $store = $priceStore->find('div', 1)->plaintext;
                         $percentage = $ebayPrice - $price;
                         $percentage = $percentage / $ebayPrice;
