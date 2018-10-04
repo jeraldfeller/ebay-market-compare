@@ -736,7 +736,7 @@ class Scraper
         $date = date('Y-m-d');
         $message = '<h2>Ebay Product Reports</h2><br>';
         $message .= 'Product list: ' . ROOT_DOMAIN . 'exports/product_list_' . $date . '.csv <br>';
-        $message .= 'No Match Product list: ' . ROOT_DOMAIN . 'exports/no_match_product_list_' . $date . '.csv<br>';
+//        $message .= 'No Match Product list: ' . ROOT_DOMAIN . 'exports/no_match_product_list_' . $date . '.csv<br>';
         $message .= 'Google Sheets: ' . ROOT_DOMAIN . 'exports/google_sheets_' . $date . '.csv<br>';
         $message .= 'Google Shopping: ' . ROOT_DOMAIN . 'exports/google_shopping_' . $date . '.csv<br>';
         $email = new PHPMailer();
@@ -823,10 +823,10 @@ class Scraper
         fputcsv($file, array('Upc', 'Price', 'Product Title', 'Store', 'Product Link', 'Ebay Price', 'Ebay Product Link'));
         fclose($file);
 
-        $csv = CSV_ROOT . 'exports/no_match_product_list_' . $date . '.csv';
-        $file = fopen($csv, "w");
-        fputcsv($file, array('Upc', 'Ebay Price', 'Product Name', 'Ebay Product Link'));
-        fclose($file);
+//        $csv = CSV_ROOT . 'exports/no_match_product_list_' . $date . '.csv';
+//        $file = fopen($csv, "w");
+//        fputcsv($file, array('Upc', 'Ebay Price', 'Product Name', 'Ebay Product Link'));
+//        fclose($file);
 
         $pdo = null;
 
