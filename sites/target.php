@@ -29,8 +29,14 @@ if($isReady == 0) {
             if (count($data['search_response']['items']['Item']) > 0) {
                 if(isset($data['search_response']['items']['Item'][0]['list_price'])){
                     $price = $data['search_response']['items']['Item'][0]['list_price']['price'];
+                    if($price == 0.0){
+                        $price = $data['search_response']['items']['Item'][0]['list_price']['max_price'];
+                    } 
                 }else{
                     $price = $data['search_response']['items']['Item'][0]['offer_price']['price'];
+                    if($price == 0.0){
+                        $price = $data['search_response']['items']['Item'][0]['offer_price']['max_price'];
+                    }
                 }
                 $directUrl = $mainUrl . $data['search_response']['items']['Item'][0]['url'];
                 $productIdentification = $data['search_response']['items']['Item'][0]['tcin'];
