@@ -24,7 +24,7 @@ if($isReady == 0) {
         $prodId = $row['id'];
         $ebayPrice = $row['product_price'];
         $url = $searchUrl . $upc;
-        $url = 'https://www.google.com/search?newwindow=1&hl=en&tbm=shop&ei=HLRSW8ezM6PD0PEP45-1wAI&btnG=Search&q=Epson%20L360%20All-in-One%20Ink%20Tank%20Printer';
+        //$url = 'https://www.google.com/search?newwindow=1&hl=en&tbm=shop&ei=HLRSW8ezM6PD0PEP45-1wAI&btnG=Search&q=Epson%20L360%20All-in-One%20Ink%20Tank%20Printer';
         $htmlData = $scraper->curlToGoogle($url);
         if ($htmlData['html']) {
             $html = str_get_html($htmlData['html']);
