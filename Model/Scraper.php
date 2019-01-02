@@ -405,6 +405,7 @@ class Scraper
     public function recordProductInfo($subId, $name, $url, $upc, $price)
     {
         $dateTime = date('Y-m-d H:i:s');
+        $name = str_replace('Details about  &nbsp;', '', $name);
         $pdo = $this->getPdo();
         $sql = 'INSERT INTO `products`
                SET `sub_category_id` = ' . $subId . ',  
