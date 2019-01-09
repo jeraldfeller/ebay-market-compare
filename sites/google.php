@@ -30,7 +30,7 @@ if($isReady == 0) {
             $html = str_get_html($htmlData['html']);
             $g = $html->find('.g');
             if ($g) {
-                for ($x = 0; $x < count($g); $x++) {
+                for ($x = 0; $x < count($g); $x++) {  
                     $a = $g[$x]->find('a', 0);
                     if ($a) {
                         $prodName = $a->plaintext;
